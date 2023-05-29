@@ -11,7 +11,7 @@ import SwiftUI
 struct MineChartsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
         }
     }
 }
