@@ -13,6 +13,7 @@
 		09EF87752A24DA7A00EC9D7A /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87742A24DA7A00EC9D7A /* LoginModel.swift */; };
 		09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */; };
 		09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF877A2A24DB3F00EC9D7A /* LoginView.swift */; };
+		09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87972A2500C300EC9D7A /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		09EF87742A24DA7A00EC9D7A /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		09EF877A2A24DB3F00EC9D7A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		09EF87972A2500C300EC9D7A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				09EF87722A24DA1F00EC9D7A /* LoginModule */,
 				09EF87622A24D6D000EC9D7A /* Assets.xcassets */,
 				09EF87642A24D6D000EC9D7A /* Preview Content */,
+				09EF87962A2500AE00EC9D7A /* Helpers */,
 			);
 			path = MineCharts;
 			sourceTree = "<group>";
@@ -95,6 +98,14 @@
 			children = (
 			);
 			path = MainModule;
+			sourceTree = "<group>";
+		};
+		09EF87962A2500AE00EC9D7A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				09EF87972A2500C300EC9D7A /* Color+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
+				09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */,
 				09EF87752A24DA7A00EC9D7A /* LoginModel.swift in Sources */,
 				09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,

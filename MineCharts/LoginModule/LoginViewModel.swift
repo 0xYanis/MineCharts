@@ -5,9 +5,15 @@
 //  Created by Yan Rybkin on 29.05.2023.
 //
 
-import Foundation
+import SwiftUI
 
-final class LoginViewModel {
+final class LoginViewModel: ObservableObject {
+    
+    @Published var walletHash = ""
+    
+    init() {
+        
+    }
     
 }
 
