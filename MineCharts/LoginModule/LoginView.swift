@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel: LoginViewModel = LoginViewModel()
-    
+    //MARK: Private properties
+    @StateObject private var viewModel: LoginViewModel = LoginViewModel()
     @State private var isShowingModal = false
     @State private var isEditing = false
     
@@ -25,44 +25,11 @@ struct LoginView: View {
                     .foregroundColor(.orange)
                 
                 VStack {
-                    HStack {
-                        Text("Привет\nМайнер !")
-                            .foregroundColor(.white)
-                            .font(.system(
-                                size: 46,
-                                weight: .heavy,
-                                design: .default)
-                            )
-                            .multilineTextAlignment(.leading)
-                        Spacer()
-                    }.padding(.horizontal, 30)
-                    
-                    
+                    customText(text: "Привет,\nМайнер !")
                     Spacer()
                     
-                    
-                    VStack {
-                        HStack {
-                            TextField(
-                                "Введите хэш кошелька...",
-                                text: $viewModel.walletHash
-                            )
-                        }
-                        .keyboardType(.alphabet)
-                        .padding(.horizontal, 15)
-                        .font(.system(size: 20))
-                        .frame(height: 50)
-                        .cornerRadius(25)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color.orange, lineWidth: 2)
-                        )
-                        .padding(.horizontal, 30)
-                    }
-                    
-                    
+                    customTextField(text: $viewModel.walletHash)
                     Spacer()
-                    
                     
                     HStack {
                         Button(action: {
@@ -70,7 +37,7 @@ struct LoginView: View {
                             hideKeyboard()
                             isShowingModal.toggle()
                         }, label: {
-                            Text("Что это такое?")
+                            Text("Что это?")
                                 .font(.system(
                                     size: 20,
                                     weight: .bold,
@@ -113,18 +80,52 @@ struct LoginView: View {
             }
             
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Image("itmo")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 100, height: 100)
+                        .frame(width: 80, height: 80)
                 }
             }
         }
     }
 }
 
+//MARK: - Private methods
 private extension LoginView {
+    func customText(text: String) -> some View {
+        HStack {
+            Text(text)
+                .foregroundColor(.white)
+                .font(.system(
+                    size: 46,
+                    weight: .heavy,
+                    design: .default)
+                )
+                .multilineTextAlignment(.leading)
+            Spacer()
+        }
+        .padding(.horizontal, 30)
+    }
+    
+    
+    func customTextField(text: Binding<String>) -> some View {
+        VStack {
+            HStack {
+                TextField("Введите хэш кошелька...", text: text)
+            }
+            .keyboardType(.alphabet)
+            .padding(.horizontal, 15)
+            .font(.system(size: 20))
+            .frame(height: 50)
+            .cornerRadius(25)
+            .overlay(RoundedRectangle(cornerRadius: 25)
+                .stroke(Color.orange, lineWidth: 2))
+            .padding(.horizontal, 30)
+        }
+    }
+    
+    
     func hideKeyboard() {
         UIApplication.shared.sendAction(
             #selector(UIResponder.resignFirstResponder),
@@ -134,6 +135,7 @@ private extension LoginView {
         )
     }
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
