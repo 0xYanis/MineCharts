@@ -44,7 +44,14 @@ struct LoginInfoView: View {
                         .font(.system(size: 20, weight: .heavy, design: .default))
                 })
                 
+                
                 Spacer()
+                
+                VStack {
+                    Text("MineCharts. Version: 0.1")
+                    Text("0xYanis. ITMO University")
+                }
+                .foregroundColor(.gray)
             }
             
         }

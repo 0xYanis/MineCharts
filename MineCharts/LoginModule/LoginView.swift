@@ -15,102 +15,112 @@ struct LoginView: View {
     @State private var isEditing = false
     
     var body: some View {
-        ZStack {
-            Color.backColor
-                .ignoresSafeArea()
-            
-            Circle()
-                .position(x:100, y: 0)
-                .foregroundColor(.orange)
-            
-            VStack {
-                HStack {
-                    Text("Welcome\nBack !")
-                        .foregroundColor(.white)
-                        .font(.system(size: 46, weight: .heavy, design: .default))
-                        .multilineTextAlignment(.leading)
-                    
-                    Spacer()
-                    
-                }.padding(.horizontal, 30)
+        NavigationStack {
+            ZStack {
+                Color.backColor
+                    .ignoresSafeArea()
                 
-                Spacer()
+                Circle()
+                    .position(x:100, y: 0)
+                    .foregroundColor(.orange)
                 
                 VStack {
                     HStack {
-                        TextField(
-                            "Entry your wallet hash...",
-                            text: $viewModel.walletHash
+                        Text("Привет\nМайнер !")
+                            .foregroundColor(.white)
+                            .font(.system(
+                                size: 46,
+                                weight: .heavy,
+                                design: .default)
+                            )
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }.padding(.horizontal, 30)
+                    
+                    
+                    Spacer()
+                    
+                    
+                    VStack {
+                        HStack {
+                            TextField(
+                                "Введите хэш кошелька...",
+                                text: $viewModel.walletHash
+                            )
+                        }
+                        .keyboardType(.alphabet)
+                        .padding(.horizontal, 15)
+                        .font(.system(size: 20))
+                        .frame(height: 50)
+                        .cornerRadius(25)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                                .stroke(Color.orange, lineWidth: 2)
                         )
-                    }
-                    .padding(.horizontal, 15)
-                    .font(.system(size: 20))
-                    .frame(height: 50)
-                    .cornerRadius(25)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 25)
-                            .stroke(Color.orange, lineWidth: 2)
-                    )
-                    .padding(.horizontal, 30)
-                }
-                
-                Spacer()
-                
-                HStack {
-                    Button(action: {
-                        isEditing.toggle()
-                        hideKeyboard()
-                        isShowingModal.toggle()
-                    }, label: {
-                        Text("What is it?")
-                            .font(.system(size: 20, weight: .bold, design: .default))
-                            .foregroundColor(.orange)
-                            .padding()
-                        
-                    }).sheet(isPresented: $isShowingModal) {
-                        LoginInfoView()
-                            .presentationDetents([.fraction(0.6)])
+                        .padding(.horizontal, 30)
                     }
                     
                     
                     Spacer()
                     
                     
-                    Button(action: {
+                    HStack {
+                        Button(action: {
+                            isEditing.toggle()
+                            hideKeyboard()
+                            isShowingModal.toggle()
+                        }, label: {
+                            Text("Что это такое?")
+                                .font(.system(
+                                    size: 20,
+                                    weight: .bold,
+                                    design: .default)
+                                )
+                                .foregroundColor(.orange)
+                                .padding()
+                            
+                        }).sheet(isPresented: $isShowingModal) {
+                            LoginInfoView()
+                                .presentationDetents([.fraction(0.6)])
+                        }
                         
-                    }, label: {
-                        Text("Let's go!")
-                            .font(.system(
-                                size: 20,
-                                weight: .bold,
-                                design: .default)
-                            )
-                            .foregroundColor(.white)
-                            .padding(.horizontal)
-                            .frame(height: 50)
-                            .background(Color.orange)
-                            .cornerRadius(25)
-                    })
+                        
+                        Spacer()
+                        
+                        
+                        NavigationLink(
+                            destination: MainView(),
+                            label: {
+                                Text("Начнем!")
+                                    .font(.system(
+                                        size: 20,
+                                        weight: .bold,
+                                        design: .default)
+                                    )
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal)
+                                    .frame(height: 50)
+                                    .background(Color.orange)
+                                    .cornerRadius(25)
+                            })
+                        .disabled(viewModel.showButton)
+                        .opacity(viewModel.showButton ? 0.5 : 1.0)
+                    }
+                    .padding(.horizontal, 30)
+                    Spacer()
                 }
-                .padding(.horizontal, 30)
-                
-                Spacer()
-                
-                VStack {
-                    Text("MineCharts. Version: 0.1")
-                    Text("0xYanis. ITMO University")
-                }
-                .foregroundColor(.gray)
-                .ignoresSafeArea(.keyboard)
-                
+                .padding(.top, 180)
             }
-            .padding(.top, 180)
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Image("itmo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                }
+            }
         }
-        .onTapGesture {
-            isEditing.toggle()
-            hideKeyboard()
-        }
-        
     }
 }
 
