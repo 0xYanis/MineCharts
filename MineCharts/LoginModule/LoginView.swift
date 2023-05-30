@@ -89,7 +89,7 @@ struct LoginView: View {
                         
                         
                         NavigationLink(
-                            destination: MainView(),
+                            destination: PoolView(),
                             label: {
                                 Text("Начнем!")
                                     .font(.system(

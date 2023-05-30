@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324B2A25F7A600F813A2 /* PoolView.swift */; };
-		0939324E2A25F7BA00F813A2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324D2A25F7BA00F813A2 /* MainViewModel.swift */; };
-		093932502A25F7C300F813A2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324F2A25F7C300F813A2 /* MainModel.swift */; };
+		0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */; };
+		093932502A25F7C300F813A2 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324F2A25F7C300F813A2 /* PoolModel.swift */; };
 		09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */; };
 		09EF87632A24D6D000EC9D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87622A24D6D000EC9D7A /* Assets.xcassets */; };
 		09EF87662A24D6D000EC9D7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */; };
@@ -24,8 +24,8 @@
 
 /* Begin PBXFileReference section */
 		0939324B2A25F7A600F813A2 /* PoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolView.swift; sourceTree = "<group>"; };
-		0939324D2A25F7BA00F813A2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		0939324F2A25F7C300F813A2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolViewModel.swift; sourceTree = "<group>"; };
+		0939324F2A25F7C300F813A2 /* PoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
 		09EF875B2A24D6CC00EC9D7A /* MineCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineChartsApp.swift; sourceTree = "<group>"; };
 		09EF87622A24D6D000EC9D7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				0939324B2A25F7A600F813A2 /* PoolView.swift */,
-				0939324D2A25F7BA00F813A2 /* MainViewModel.swift */,
-				0939324F2A25F7C300F813A2 /* MainModel.swift */,
+				0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */,
+				0939324F2A25F7C300F813A2 /* PoolModel.swift */,
 			);
 			path = PoolModule;
 			sourceTree = "<group>";
@@ -225,8 +225,8 @@
 				09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */,
 				09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,
-				093932502A25F7C300F813A2 /* MainModel.swift in Sources */,
-				0939324E2A25F7BA00F813A2 /* MainViewModel.swift in Sources */,
+				093932502A25F7C300F813A2 /* PoolModel.swift in Sources */,
+				0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
