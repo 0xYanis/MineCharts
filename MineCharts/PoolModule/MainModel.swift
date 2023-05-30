@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct MainModel: Codable, Equatable {
+struct PoolModel: Codable, Equatable {
     
 }

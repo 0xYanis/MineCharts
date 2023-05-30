@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0939324C2A25F7A600F813A2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324B2A25F7A600F813A2 /* MainView.swift */; };
+		0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324B2A25F7A600F813A2 /* PoolView.swift */; };
 		0939324E2A25F7BA00F813A2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324D2A25F7BA00F813A2 /* MainViewModel.swift */; };
 		093932502A25F7C300F813A2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324F2A25F7C300F813A2 /* MainModel.swift */; };
 		09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0939324B2A25F7A600F813A2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0939324B2A25F7A600F813A2 /* PoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolView.swift; sourceTree = "<group>"; };
 		0939324D2A25F7BA00F813A2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		0939324F2A25F7C300F813A2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		09EF875B2A24D6CC00EC9D7A /* MineCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +71,7 @@
 			children = (
 				09FF44982A2513D3002CBA8C /* APIService */,
 				09EF87702A24D97200EC9D7A /* Application */,
-				09EF87732A24DA2A00EC9D7A /* MainModule */,
+				09EF87732A24DA2A00EC9D7A /* PoolModule */,
 				09EF87722A24DA1F00EC9D7A /* LoginModule */,
 				09EF87622A24D6D000EC9D7A /* Assets.xcassets */,
 				09EF87642A24D6D000EC9D7A /* Preview Content */,
@@ -107,14 +107,14 @@
 			path = LoginModule;
 			sourceTree = "<group>";
 		};
-		09EF87732A24DA2A00EC9D7A /* MainModule */ = {
+		09EF87732A24DA2A00EC9D7A /* PoolModule */ = {
 			isa = PBXGroup;
 			children = (
-				0939324B2A25F7A600F813A2 /* MainView.swift */,
+				0939324B2A25F7A600F813A2 /* PoolView.swift */,
 				0939324D2A25F7BA00F813A2 /* MainViewModel.swift */,
 				0939324F2A25F7C300F813A2 /* MainModel.swift */,
 			);
-			path = MainModule;
+			path = PoolModule;
 			sourceTree = "<group>";
 		};
 		09EF87962A2500AE00EC9D7A /* Helpers */ = {
@@ -218,7 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
-				0939324C2A25F7A600F813A2 /* MainView.swift in Sources */,
+				0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */,
 				09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */,
 				09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */,
 				09EF87752A24DA7A00EC9D7A /* LoginModel.swift in Sources */,
