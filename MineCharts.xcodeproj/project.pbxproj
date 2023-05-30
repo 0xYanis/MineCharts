@@ -16,6 +16,7 @@
 		09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87972A2500C300EC9D7A /* Color+Extension.swift */; };
 		09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF44992A2513E8002CBA8C /* APIService.swift */; };
 		09FF449D2A2514A2002CBA8C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 09FF449C2A2514A2002CBA8C /* Alamofire */; };
+		09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		09EF877A2A24DB3F00EC9D7A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		09EF87972A2500C300EC9D7A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		09FF44992A2513E8002CBA8C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		09EF87722A24DA1F00EC9D7A /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				09FF449E2A2522D8002CBA8C /* Subviews */,
 				09EF877A2A24DB3F00EC9D7A /* LoginView.swift */,
 				09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */,
 				09EF87742A24DA7A00EC9D7A /* LoginModel.swift */,
@@ -119,6 +122,14 @@
 				09FF44992A2513E8002CBA8C /* APIService.swift */,
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		09FF449E2A2522D8002CBA8C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			files = (
 				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
 				09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */,
+				09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */,
 				09EF87752A24DA7A00EC9D7A /* LoginModel.swift in Sources */,
 				09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */,
 				09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */,
