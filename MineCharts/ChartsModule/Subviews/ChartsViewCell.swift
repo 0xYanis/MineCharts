@@ -7,14 +7,13 @@
 
 import SwiftUI
 
+
 struct ChartsViewCell: View {
     var body: some View {
-        Text("123") 
+        NavigationStack {
+           
+        }
     }
-}
-
-private extension ChartsViewCell {
-    
 }
 
 struct ChartsViewCell_Previews: PreviewProvider {
