@@ -51,7 +51,7 @@ struct PoolView: View {
                     Spacer()
                     
                     NavigationLink(destination: {
-                        
+                        ChartsView()
                     }, label: {
                         Text("Выбрал!")
                             .foregroundColor(.orange)
