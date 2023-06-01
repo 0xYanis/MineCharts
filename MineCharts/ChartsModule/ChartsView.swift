@@ -19,9 +19,10 @@ struct ChartsView: View {
                 
                 VStack {
                     HStack(spacing: 20) {
-                        ChartsViewCell()
-                        ChartsViewCell()
+                        
                     }
+                    
+                    
                     
                     Spacer()
                 }
