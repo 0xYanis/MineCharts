@@ -10,6 +10,9 @@
 		0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324B2A25F7A600F813A2 /* PoolView.swift */; };
 		0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */; };
 		093932502A25F7C300F813A2 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324F2A25F7C300F813A2 /* PoolModel.swift */; };
+		093932532A26619B00F813A2 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932522A26619B00F813A2 /* ChartsView.swift */; };
+		093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932542A2661D700F813A2 /* ChartsViewModel.swift */; };
+		0939325A2A26630800F813A2 /* ChartsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932592A26630800F813A2 /* ChartsViewCell.swift */; };
 		09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */; };
 		09EF87632A24D6D000EC9D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87622A24D6D000EC9D7A /* Assets.xcassets */; };
 		09EF87662A24D6D000EC9D7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */; };
@@ -17,8 +20,8 @@
 		09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */; };
 		09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF877A2A24DB3F00EC9D7A /* LoginView.swift */; };
 		09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87972A2500C300EC9D7A /* Color+Extension.swift */; };
+		09F879B12A28BA3100E7545F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 09F879B02A28BA3100E7545F /* Alamofire */; };
 		09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF44992A2513E8002CBA8C /* APIService.swift */; };
-		09FF449D2A2514A2002CBA8C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 09FF449C2A2514A2002CBA8C /* Alamofire */; };
 		09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		0939324B2A25F7A600F813A2 /* PoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolView.swift; sourceTree = "<group>"; };
 		0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolViewModel.swift; sourceTree = "<group>"; };
 		0939324F2A25F7C300F813A2 /* PoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
+		093932522A26619B00F813A2 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		093932542A2661D700F813A2 /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
+		093932592A26630800F813A2 /* ChartsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewCell.swift; sourceTree = "<group>"; };
 		09EF875B2A24D6CC00EC9D7A /* MineCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineChartsApp.swift; sourceTree = "<group>"; };
 		09EF87622A24D6D000EC9D7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,13 +49,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FF449D2A2514A2002CBA8C /* Alamofire in Frameworks */,
+				09F879B12A28BA3100E7545F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093932512A26617900F813A2 /* ChartsModule */ = {
+			isa = PBXGroup;
+			children = (
+				093932562A2662CA00F813A2 /* Subviews */,
+				093932522A26619B00F813A2 /* ChartsView.swift */,
+				093932542A2661D700F813A2 /* ChartsViewModel.swift */,
+			);
+			path = ChartsModule;
+			sourceTree = "<group>";
+		};
+		093932562A2662CA00F813A2 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				093932592A26630800F813A2 /* ChartsViewCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		09EF87522A24D6CC00EC9D7A = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +95,7 @@
 			children = (
 				09FF44982A2513D3002CBA8C /* APIService */,
 				09EF87702A24D97200EC9D7A /* Application */,
+				093932512A26617900F813A2 /* ChartsModule */,
 				09EF87732A24DA2A00EC9D7A /* PoolModule */,
 				09EF87722A24DA1F00EC9D7A /* LoginModule */,
 				09EF87622A24D6D000EC9D7A /* Assets.xcassets */,
@@ -158,7 +183,7 @@
 			);
 			name = MineCharts;
 			packageProductDependencies = (
-				09FF449C2A2514A2002CBA8C /* Alamofire */,
+				09F879B02A28BA3100E7545F /* Alamofire */,
 			);
 			productName = MineCharts;
 			productReference = 09EF875B2A24D6CC00EC9D7A /* MineCharts.app */;
@@ -189,7 +214,7 @@
 			);
 			mainGroup = 09EF87522A24D6CC00EC9D7A;
 			packageReferences = (
-				09FF449B2A2514A2002CBA8C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				09F879AF2A28BA3100E7545F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 09EF875C2A24D6CC00EC9D7A /* Products */;
 			projectDirPath = "";
@@ -218,15 +243,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
+				093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */,
 				0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */,
 				09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */,
 				09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */,
+				0939325A2A26630800F813A2 /* ChartsViewCell.swift in Sources */,
 				09EF87752A24DA7A00EC9D7A /* LoginModel.swift in Sources */,
 				09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */,
 				09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,
 				093932502A25F7C300F813A2 /* PoolModel.swift in Sources */,
 				0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */,
+				093932532A26619B00F813A2 /* ChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,20 +463,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		09FF449B2A2514A2002CBA8C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		09F879AF2A28BA3100E7545F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		09FF449C2A2514A2002CBA8C /* Alamofire */ = {
+		09F879B02A28BA3100E7545F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 09FF449B2A2514A2002CBA8C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 09F879AF2A28BA3100E7545F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

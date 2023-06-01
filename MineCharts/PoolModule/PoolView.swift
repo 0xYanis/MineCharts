@@ -7,16 +7,9 @@
 
 import SwiftUI
 
-enum PoolSelection : String, CaseIterable {
-    case ftwopools = "F2Pool"
-    case twominers = "2Miners"
-    case ethermine = "Ethermine"
-}
-
 struct PoolView: View {
     
     @StateObject var viewModel: PoolViewModel = PoolViewModel()
-    @State var segmentationSelection: PoolSelection = .ftwopools
     
     var body: some View {
         NavigationStack {
@@ -25,20 +18,42 @@ struct PoolView: View {
                     .ignoresSafeArea()
                 
                 Circle()
-                    .position(x:100, y: 0)
+                    .position(x:370, y: 0)
                     .foregroundColor(.orange)
                 
-                VStack(alignment: .leading) {
-                    Text("Выберите используемый пул:")
+                VStack {
+                    Spacer()
                     
-                    Picker("", selection: $segmentationSelection) {
-                        ForEach(PoolSelection.allCases, id: \.self) { option in
-                            Text(option.rawValue)
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Выберите используемый пул:")
+                        Picker("", selection: $viewModel.segmentPoolSelection) {
+                            ForEach(PoolSelection.allCases, id: \.self) { option in
+                                Text(option.rawValue)
+                            }
                         }
-                    }.pickerStyle(SegmentedPickerStyle())
-                        .padding()
+                        .pickerStyle(SegmentedPickerStyle())
+
+                        Text("Выберите добываемую монету:")
+                        Picker("", selection: $viewModel.segmentCoinSelection) {
+                            ForEach(CoinSelection.allCases, id: \.self) { option in
+                                Text(option.rawValue)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        
+
+                    }.padding(.horizontal)
+
+                    Spacer()
+                    
+                    NavigationLink(destination: {
+                        ChartsView()
+                    }, label: {
+                        Text("Выбрал!")
+                            .foregroundColor(.orange)
+                    })
+                    
                 }
-                .padding(.horizontal)
             }
         }
     }
