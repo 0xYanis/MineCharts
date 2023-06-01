@@ -11,6 +11,7 @@ import Charts
 struct ChartsView: View {
     
     @StateObject private var viewModel = ChartsViewModel()
+    private(set) var title: String
     
     var body: some View {
         NavigationStack {
@@ -18,23 +19,20 @@ struct ChartsView: View {
                 Color.backColor.ignoresSafeArea()
                 
                 ScrollView {
-                    ChartsGraphView(viewModel: viewModel)
-                    .frame(
-                        maxWidth: .infinity,
-                        maxHeight: .infinity,
-                        alignment: .top
-                    )
-                    .padding()
+                    ChartsGridCell(viewModel: viewModel, customSize: 165)
+                        .padding(.top, 15)
+                        .padding(.bottom, 5)
                     
                     ChartsGraphView(viewModel: viewModel)
-                    .frame(
-                        maxWidth: .infinity,
-                        maxHeight: .infinity
-                    )
-                    .padding()
+                        .frame(
+                            maxWidth: .infinity,
+                            maxHeight: .infinity,
+                            alignment: .top
+                        )
+                        .padding(.horizontal)
+                    
+                    
                 }
-                
-                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -55,7 +53,7 @@ struct ChartsView: View {
                     })
                 }
             }
-            .navigationTitle("F2Pool")
+            .navigationTitle(title)
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
             
@@ -78,8 +76,8 @@ private extension ChartsView {
         for (index, _) in viewModel.sampleAnalytics.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * delay) {
                 let animation = fromChange ?
-                    Animation.easeInOut(duration: 0.8) :
-                    Animation.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)
+                Animation.easeInOut(duration: 0.8) :
+                Animation.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)
                 withAnimation(animation) {
                     viewModel.sampleAnalytics[index].animate = true
                 }
@@ -90,7 +88,7 @@ private extension ChartsView {
 
 struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartsView()
+        ChartsView(title: "Coin")
             .preferredColorScheme(.dark)
     }
 }

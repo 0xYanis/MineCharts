@@ -34,8 +34,12 @@ struct ChartsGraphView: View {
                     .padding(.leading, 80)
                 }
                 
-                Text(viewModel.totalValue.stringFormat)
-                    .font(.largeTitle.bold())
+                HStack {
+                    Text(viewModel.totalValue.stringFormat)
+                        .font(.largeTitle.bold())
+                    
+                    Toggle(isOn: $isLineGraph) {}
+                }
                 
                 AnimatedChart()
             }
@@ -44,10 +48,6 @@ struct ChartsGraphView: View {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(.black.shadow(.drop(radius: 2)))
             }
-            
-            Toggle("Line Graph", isOn: $isLineGraph)
-                .padding(.top)
-            
         }
     }
 }
@@ -150,6 +150,17 @@ private extension ChartsGraphView {
                     viewModel.sampleAnalytics[index].animate = true
                 }
             }
+        }
+    }
+}
+
+
+struct ChartsGraphView_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack {
+            Color.backColor.ignoresSafeArea()
+            ChartsGraphView(viewModel: ChartsViewModel())
+                .preferredColorScheme(.dark)
         }
     }
 }
