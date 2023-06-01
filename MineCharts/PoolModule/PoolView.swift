@@ -24,30 +24,34 @@ struct PoolView: View {
                 VStack {
                     Spacer()
                     
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text("Выберите используемый пул:")
-                        Picker("", selection: $viewModel.segmentPoolSelection) {
-                            ForEach(PoolSelection.allCases, id: \.self) { option in
-                                Text(option.rawValue)
+                    VStack(spacing: 50) {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("Выберите используемый пул:")
+                            Picker("", selection: $viewModel.segmentPoolSelection) {
+                                ForEach(PoolSelection.allCases, id: \.self) { option in
+                                    Text(option.rawValue)
+                                }
                             }
+                            .pickerStyle(SegmentedPickerStyle())
                         }
-                        .pickerStyle(SegmentedPickerStyle())
-
-                        Text("Выберите добываемую монету:")
-                        Picker("", selection: $viewModel.segmentCoinSelection) {
-                            ForEach(CoinSelection.allCases, id: \.self) { option in
-                                Text(option.rawValue)
-                            }
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
                         
-
-                    }.padding(.horizontal)
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("Выберите добываемую монету:")
+                            Picker("", selection: $viewModel.segmentCoinSelection) {
+                                ForEach(CoinSelection.allCases, id: \.self) { option in
+                                    Text(option.rawValue)
+                                }
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+                        }
+                        
+                    }
+                    .padding(.horizontal)
 
                     Spacer()
                     
                     NavigationLink(destination: {
-                        ChartsView()
+                        
                     }, label: {
                         Text("Выбрал!")
                             .foregroundColor(.orange)
