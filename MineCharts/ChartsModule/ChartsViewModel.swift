@@ -28,4 +28,8 @@ final class ChartsViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    func getMinerName() -> String {
+        let name = UserDefaults.standard.string(forKey: "minerName") ?? "Miner"
+        return name
+    }
 }

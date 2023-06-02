@@ -51,7 +51,7 @@ struct PoolView: View {
                     Spacer()
                     
                     NavigationLink(destination: {
-                        ChartsView(title: viewModel.segmentPoolSelection.rawValue)
+                        ChartsView()
                     }, label: {
                         Text("Выбрал!")
                             .foregroundColor(.orange)

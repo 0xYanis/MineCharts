@@ -11,7 +11,6 @@ import Charts
 struct ChartsView: View {
     
     @StateObject private var viewModel = ChartsViewModel()
-    private(set) var title: String
     
     var body: some View {
         NavigationStack {
@@ -54,7 +53,7 @@ struct ChartsView: View {
                     })
                 }
             }
-            .navigationTitle(title)
+            .navigationTitle(viewModel.getMinerName())
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
             
@@ -99,7 +98,7 @@ private extension ChartsView {
 
 struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartsView(title: "Coin")
+        ChartsView()
             .preferredColorScheme(.dark)
     }
 }

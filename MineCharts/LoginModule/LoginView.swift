@@ -28,7 +28,9 @@ struct LoginView: View {
                     customText(text: "Привет,\nМайнер !")
                     Spacer()
                     
-                    customTextField(text: $viewModel.walletHash)
+                    customTextField("Дайте имя майнеру...", text: $viewModel.minerName)
+                        .padding(.vertical, 20)
+                    customTextField("Введите хэш кошелька...", text: $viewModel.walletHash)
                     Spacer()
                     
                     HStack {
@@ -56,22 +58,21 @@ struct LoginView: View {
                         
                         
                         NavigationLink(
-                            destination: PoolView(),
+                            destination: PoolView()
+                                .onAppear {
+                                    viewModel.buttonPressed()
+                                },
                             label: {
                                 Text("Начнем!")
-                                    .font(.system(
-                                        size: 20,
-                                        weight: .bold,
-                                        design: .default)
-                                    )
+                                    .font(.system(size: 20, weight: .bold, design: .default))
                                     .foregroundColor(.white)
-                                    .padding(.horizontal)
                                     .frame(height: 50)
+                                    .padding(.horizontal)
                                     .background(Color.orange)
                                     .cornerRadius(25)
                             })
-                        .disabled(viewModel.showButton)
-                        .opacity(viewModel.showButton ? 0.5 : 1.0)
+                            .opacity(viewModel.showButton ? 0.5 : 1.0)
+                            .disabled(viewModel.showButton)
                     }
                     .padding(.horizontal, 30)
                     Spacer()
@@ -109,10 +110,10 @@ private extension LoginView {
     }
     
     
-    func customTextField(text: Binding<String>) -> some View {
+    func customTextField(_ label: String, text: Binding<String>) -> some View {
         VStack {
             HStack {
-                TextField("Введите хэш кошелька...", text: text)
+                TextField(label, text: text)
             }
             .keyboardType(.alphabet)
             .padding(.horizontal, 15)

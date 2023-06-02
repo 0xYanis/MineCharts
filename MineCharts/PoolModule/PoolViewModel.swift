@@ -13,7 +13,6 @@ final class PoolViewModel: ObservableObject {
     @Published var segmentPoolSelection: PoolSelection = .ftwopools
     @Published var segmentCoinSelection: CoinSelection = .btc
     
-    
     init() {
         
     }
