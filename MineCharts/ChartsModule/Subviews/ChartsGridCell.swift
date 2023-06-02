@@ -12,23 +12,20 @@ struct ChartsGridCell: View {
     @ObservedObject var viewModel: ChartsViewModel
     var customSize: CGFloat
     
-    @State private var rotationAngle: Double = 0
-    
     var body: some View {
         VStack {
-            LazyVGrid(
-                columns: [GridItem(.adaptive(minimum: 150))],
-                spacing: 0
-            ) {
-                Group {
-                    chartsProfitView(profit: "0.0412")
-                        .frame(width: customSize, height: customSize / 2)
-                    
-                    chartsHashView(power: "123Mh/s")
-                        .frame(width: customSize, height: customSize / 2)
+            Grid(horizontalSpacing: 20) {
+                GridRow {
+                    Group {
+                        chartsProfitView(profit: "0.0412")
+                            .frame(width: customSize, height: customSize / 2)
+                        
+                        chartsHashView(power: "123Mh/s")
+                            .frame(width: customSize, height: customSize / 2)
+                    }
+                    .background(Color.black)
+                    .cornerRadius(10)
                 }
-                .background(Color.black)
-                .cornerRadius(10)
             }
         }
     }
@@ -42,7 +39,7 @@ private extension ChartsGridCell {
                 .padding(.top, 5)
             Spacer()
             Text(profit)
-                .font(.system(size: 28, weight: .bold, design: .default))
+                .font(.system(size: 28, weight: .bold, design: .rounded))
             Spacer()
         }
     }
@@ -54,7 +51,7 @@ private extension ChartsGridCell {
                 .padding(.top, 5)
             Spacer()
             Text(power)
-                .font(.system(size: 28, weight: .bold, design: .default))
+                .font(.system(size: 28, weight: .bold, design: .rounded))
             Spacer()
         }
     }

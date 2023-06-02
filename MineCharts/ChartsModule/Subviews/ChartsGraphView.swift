@@ -19,23 +19,25 @@ struct ChartsGraphView: View {
         VStack {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    Text("Views")
+                    Text("Мощность")
+                        .fontDesign(.rounded)
                         .fontWeight(.semibold)
                     
                     Picker("", selection: $viewModel.currentTab) {
-                        Text("7 Days")
-                            .tag("7 Days")
-                        Text("Week")
-                            .tag("Week")
-                        Text("Month")
-                            .tag("Month")
+                        Text("День")
+                            .tag("День")
+                        Text("Неделя")
+                            .tag("Неделя")
+                        Text("Месяц")
+                            .tag("Месяц")
                     }
                     .pickerStyle(.segmented)
-                    .padding(.leading, 80)
+                    .padding(.leading, 40)
                 }
                 
                 HStack {
                     Text(viewModel.totalValue.stringFormat)
+                        .fontDesign(.rounded)
                         .font(.largeTitle.bold())
                     
                     Toggle(isOn: $isLineGraph) {}
@@ -90,7 +92,7 @@ private extension ChartsGraphView {
                     
                         .annotation(position: .top) {
                             VStack(alignment: .leading, spacing: 6) {
-                                Text("Views")
+                                Text("Мощность")
                                     .font(.caption)
                                     .foregroundColor(.gray)
                                 
@@ -138,7 +140,7 @@ private extension ChartsGraphView {
                     )
             }
         })
-        .frame(height: 200)
+        .frame(height: 160)
         .onAppear {
             animateGraph()
         }

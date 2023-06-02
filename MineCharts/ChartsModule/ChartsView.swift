@@ -19,7 +19,8 @@ struct ChartsView: View {
                 Color.backColor.ignoresSafeArea()
                 
                 ScrollView {
-                    ChartsGridCell(viewModel: viewModel, customSize: scaleScreen(130))
+                    ChartsGridCell(viewModel: viewModel, customSize: scaleScreen(170))
+                        .padding(.horizontal)
                         .padding(.top, 15)
                         .padding(.bottom, 5)
                     
