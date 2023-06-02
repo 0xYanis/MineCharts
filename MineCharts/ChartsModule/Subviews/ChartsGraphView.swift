@@ -87,6 +87,7 @@ private extension ChartsGraphView {
                     RuleMark(x: .value("Hour", viewModel.currentActiveItem?.hour ?? Date() ))
                         .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
                         .offset(x: (plotWidth / CGFloat(viewModel.sampleAnalytics.count)) / 2)
+                    
                         .annotation(position: .top) {
                             VStack(alignment: .leading, spacing: 6) {
                                 Text("Views")
@@ -99,8 +100,12 @@ private extension ChartsGraphView {
                             }
                             .padding(.horizontal, 10)
                             .padding(.vertical, 4)
+                            
                             .background {
-                                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                RoundedRectangle(
+                                    cornerRadius: 6,
+                                    style: .continuous
+                                )
                                     .fill(.white.shadow(.drop(radius: 2)))
                             }
                         }

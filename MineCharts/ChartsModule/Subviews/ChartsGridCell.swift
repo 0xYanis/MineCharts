@@ -31,9 +31,7 @@ struct ChartsGridCell: View {
                 .cornerRadius(10)
             }
         }
-        .padding(.horizontal)
     }
-    
 }
 
 private extension ChartsGridCell {

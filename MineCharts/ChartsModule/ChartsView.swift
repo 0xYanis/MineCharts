@@ -19,7 +19,7 @@ struct ChartsView: View {
                 Color.backColor.ignoresSafeArea()
                 
                 ScrollView {
-                    ChartsGridCell(viewModel: viewModel, customSize: 165)
+                    ChartsGridCell(viewModel: viewModel, customSize: scaleScreen(130))
                         .padding(.top, 15)
                         .padding(.bottom, 5)
                     
@@ -83,6 +83,16 @@ private extension ChartsView {
                 }
             }
         }
+    }
+    
+    func scaleScreen(_ value : CGFloat) -> CGFloat{
+        let x = UIScreen.main.bounds.width/393
+        return value * x
+    }
+
+    func scaleScreen_y(_ value : CGFloat) -> CGFloat{
+        let y = UIScreen.main.bounds.height/852
+        return value * y
     }
 }
 
