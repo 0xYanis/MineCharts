@@ -15,13 +15,15 @@ protocol ChartsMiningServiceProtocol: AnyObject {
 final class ChartsMiningService: ChartsMiningServiceProtocol {
     
     private var apiService: APIServiceProtocol
-    private let url = ""
+    private var url = ""
+    private var wallet = ""
     private var httpHeaders: HTTPHeaders = [
         HTTPHeader(name: "", value: "")
     ]
     
-    private init(apiService: APIServiceProtocol = APIService()) {
+    init(wallet: String, apiService: APIServiceProtocol = APIService()) {
         self.apiService = apiService
+        self.wallet = wallet
     }
     
     

@@ -13,13 +13,13 @@ struct ChartsGraphView: View {
     @ObservedObject var viewModel: ChartsViewModel
     
     @State private var isLineGraph: Bool = false
-    @State private var plotWidth: CGFloat = 0
+    @State private var hashTitle = ""
     
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    Text("Мощность")
+                    Text("Hashrate")
                         .fontDesign(.rounded)
                         .fontWeight(.semibold)
                     
@@ -36,7 +36,8 @@ struct ChartsGraphView: View {
                 }
                 
                 HStack {
-                    Text(viewModel.totalValue.stringFormat)
+                    let value = hashTitle.isEmpty ? "~\(viewModel.totalValue.stringFormat) Mh/s" : hashTitle
+                    Text(value)
                         .fontDesign(.rounded)
                         .font(.largeTitle.bold())
                     
@@ -47,116 +48,101 @@ struct ChartsGraphView: View {
             }
             .padding()
             .background {
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                RoundedRectangle(cornerRadius: 15, style: .continuous)
                     .fill(.black.shadow(.drop(radius: 2)))
             }
         }
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity,
+            alignment: .top
+        )
     }
 }
 
 private extension ChartsGraphView {
     @ViewBuilder
     func AnimatedChart() -> some View {
-        let max = viewModel.sampleAnalytics.max { item1, item2 in
-            return item2.views > item1.views
-        }?.views ?? 0
-        
-        Chart {
-            ForEach(viewModel.sampleAnalytics) { item in
-                if isLineGraph {
-                    LineMark(x: .value("Hour", item.hour, unit: .hour),
-                             y: .value("Views", item.animate ? item.views : 0)
-                    )
-                    .foregroundStyle(Color.orange.gradient)
-                    .interpolationMethod(.catmullRom)
-                    
-                } else {
-                    BarMark(x: .value("Hour", item.hour, unit: .hour),
-                            y: .value("Views", item.animate ? item.views : 0)
-                    )
-                    .foregroundStyle(Color.orange.gradient)
-                }
+        if isLineGraph {
+            Chart(viewModel.hashrate) {
+                LineMark(
+                    x: .value("Часы", $0.hour),
+                    y: .value("Хешрейт", $0.hash)
+                )
+                .interpolationMethod(.catmullRom)
+                .foregroundStyle(.orange.gradient)
                 
-                if isLineGraph {
-                    AreaMark(x: .value("Hour", item.hour, unit: .hour),
-                             y: .value("Views", item.animate ? item.views : 0)
-                    )
-                    .foregroundStyle(Color.orange.opacity(0.1).gradient)
-                    .interpolationMethod(.catmullRom)
-                }
-                let currentActiveItem = viewModel.currentActiveItem
-                if let currentActiveItem, currentActiveItem.id == item.id {
-                    RuleMark(x: .value("Hour", viewModel.currentActiveItem?.hour ?? Date() ))
-                        .lineStyle(.init(lineWidth: 2, miterLimit: 2, dash: [2], dashPhase: 5))
-                        .offset(x: (plotWidth / CGFloat(viewModel.sampleAnalytics.count)) / 2)
-                    
-                        .annotation(position: .top) {
-                            VStack(alignment: .leading, spacing: 6) {
-                                Text("Мощность")
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
-                                
-                                Text(viewModel.currentActiveItem?.views.stringFormat ?? "")
-                                    .font(.caption)
-                                    .foregroundColor(.black)
-                            }
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 4)
-                            
-                            .background {
-                                RoundedRectangle(
-                                    cornerRadius: 6,
-                                    style: .continuous
-                                )
-                                    .fill(.white.shadow(.drop(radius: 2)))
-                            }
-                        }
-                }
+                AreaMark(
+                    x: .value("Часы", $0.hour),
+                    y: .value("Хешрейт", $0.hash)
+                )
+                .foregroundStyle(.opacity(0.3))
+            }
+            .chartOverlay { proxy in
+                createChartOverlay(proxy: proxy)
+            }
+        } else {
+            Chart(viewModel.hashrate) {
+                BarMark(
+                    x: .value("Часы", $0.hour),
+                    y: .value("Хешрейт", $0.hash)
+                )
+                .foregroundStyle(.orange.gradient)
+            }
+            .chartOverlay { proxy in
+                createChartOverlay(proxy: proxy)
             }
         }
-        .chartYScale(domain: 0...(max + 2500))
-        .chartOverlay(content: { proxy in
-            GeometryReader { innerProxy in
-                Rectangle()
-                    .fill(.clear).contentShape(Rectangle())
-                    .gesture(
-                        DragGesture()
-                            .onChanged { value in
-                                let location = value.location
-                                
-                                if let date: Date = proxy.value(atX: location.x) {
-                                    let calendar = Calendar.current
-                                    let hour = calendar.component(.hour, from: date)
-                                    if let currentItem = viewModel.sampleAnalytics.first(where: { item in
-                                        calendar.component(.hour, from: item.hour) == hour
-                                    }) {
-                                        self.viewModel.currentActiveItem = currentItem
-                                        self.plotWidth = proxy.plotAreaSize.width
-                                    }
-                                }
-                            }.onEnded { value in
-                                self.viewModel.currentActiveItem = nil
-                            }
-                    )
-            }
-        })
-        .frame(height: 160)
-        .onAppear {
-            animateGraph()
-        }
+        
     }
     
-    func animateGraph(fromChange: Bool = false) {
-        let delay = fromChange ? 0.03 : 0.05
-        for (index, _) in viewModel.sampleAnalytics.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * delay) {
-                let animation = fromChange ?
-                    Animation.easeInOut(duration: 0.8) :
-                    Animation.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)
-                withAnimation(animation) {
-                    viewModel.sampleAnalytics[index].animate = true
+    func findElement(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> Double? {
+        let relativeYPosition = location.y - geometry[proxy.plotAreaFrame].origin.y
+        
+        if let value = proxy.value(atY: relativeYPosition) as Double? {
+            var minDistance: TimeInterval = .infinity
+            var index: Int? = nil
+            
+            for salesDataIndex in viewModel.hashrate.indices {
+                let nthSalesDataDistance = viewModel.hashrate[salesDataIndex].hash.distance(to: value)
+                if abs(nthSalesDataDistance) < minDistance {
+                    minDistance = abs(nthSalesDataDistance)
+                    index = salesDataIndex
                 }
             }
+            
+            if let index {
+                return viewModel.hashrate[index].hash
+            }
+        }
+        
+        return nil
+    }
+    
+    func createChartOverlay(proxy: ChartProxy) -> some View {
+        GeometryReader { geometry in
+            Rectangle().fill(.clear).contentShape(Rectangle())
+                .gesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { value in
+                            let origin = geometry[proxy.plotAreaFrame].origin
+                            let size = geometry[proxy.plotAreaFrame].size
+                            let minY = origin.y
+                            let maxY = origin.y + size.height
+                            let y = value.location.y
+                            if y >= minY && y <= maxY {
+                                let hashValue = findElement(
+                                    location: value.location,
+                                    proxy: proxy,
+                                    geometry: geometry
+                                ) ?? 0.0
+                                self.hashTitle = "\(hashValue.stringFormat) Mh/s"
+                            }
+                        }
+                        .onEnded { value in
+                            self.hashTitle = "~\(viewModel.totalValue.stringFormat) Mh/s"
+                        }
+                )
         }
     }
 }

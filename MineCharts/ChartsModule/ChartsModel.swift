@@ -8,31 +8,31 @@
 import Foundation
 
 struct ChartsModel: Identifiable {
-    var id = UUID().uuidString
+    var id = UUID()
     var hour: Date
-    var views: Double
+    var hash: Double
     var animate: Bool = false
 }
 
-extension Date {
-    func updateHour(value: Int) -> Date {
-        let calendar = Calendar.current
-        return calendar.date(bySettingHour: value, minute: 0, second: 0, of: self) ?? .now
-    }
-}
-
 var sample_analytics: [ChartsModel] = [
-    ChartsModel(hour: Date().updateHour(value: 8), views: 1500),
-    ChartsModel(hour: Date().updateHour(value: 9), views: 1735),
-    ChartsModel(hour: Date().updateHour(value: 10), views: 3220),
-    ChartsModel(hour: Date().updateHour(value: 11), views: 1812),
-    ChartsModel(hour: Date().updateHour(value: 12), views: 947),
-    ChartsModel(hour: Date().updateHour(value: 13), views: 4215),
-    ChartsModel(hour: Date().updateHour(value: 14), views: 3215),
-    ChartsModel(hour: Date().updateHour(value: 15), views: 2528),
-    ChartsModel(hour: Date().updateHour(value: 16), views: 10000),
-    ChartsModel(hour: Date().updateHour(value: 17), views: 1345),
-    ChartsModel(hour: Date().updateHour(value: 18), views: 4325),
-    ChartsModel(hour: Date().updateHour(value: 19), views: 6043),
-    ChartsModel(hour: Date().updateHour(value: 20), views: 2345)
+    ChartsModel(hour: Date().updateHour(value: 0), hash: 43.45),
+    ChartsModel(hour: Date().updateHour(value: 1), hash: 55.67),
+    ChartsModel(hour: Date().updateHour(value: 2), hash: 48.12),
+    ChartsModel(hour: Date().updateHour(value: 3), hash: 46.98),
+    ChartsModel(hour: Date().updateHour(value: 4), hash: 49.86),
+    ChartsModel(hour: Date().updateHour(value: 5), hash: 51.45),
+    ChartsModel(hour: Date().updateHour(value: 6), hash: 43.78),
+    ChartsModel(hour: Date().updateHour(value: 7), hash: 55.65),
+    ChartsModel(hour: Date().updateHour(value: 8), hash: 44.76),
+    ChartsModel(hour: Date().updateHour(value: 9), hash: 37.89),
+    ChartsModel(hour: Date().updateHour(value: 10), hash: 49.21),
+    ChartsModel(hour: Date().updateHour(value: 11), hash: 55.99),
+    ChartsModel(hour: Date().updateHour(value: 12), hash: 48.67),
+    ChartsModel(hour: Date().updateHour(value: 13), hash: 41.09),
+    ChartsModel(hour: Date().updateHour(value: 14), hash: 42.56),
+    ChartsModel(hour: Date().updateHour(value: 15), hash: 54.12),
+    ChartsModel(hour: Date().updateHour(value: 16), hash: 66.08),
+    ChartsModel(hour: Date().updateHour(value: 17), hash: 43.98),
+    ChartsModel(hour: Date().updateHour(value: 18), hash: 37.76),
+    ChartsModel(hour: Date().updateHour(value: 19), hash: 49.34)
 ]

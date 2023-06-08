@@ -20,11 +20,11 @@ struct ChartsGridCell: View {
                         chartsProfitView(profit: "0.0412")
                             .frame(width: customSize, height: customSize / 2)
                         
-                        chartsHashView(power: "123Mh/s")
+                        chartsHashView(power: "43 Mh/s")
                             .frame(width: customSize, height: customSize / 2)
                     }
                     .background(Color.black)
-                    .cornerRadius(10)
+                    .cornerRadius(15)
                 }
             }
         }
