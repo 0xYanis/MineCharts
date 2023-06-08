@@ -23,8 +23,17 @@ struct ChartsView: View {
                         .padding(.top, 15)
                         .padding(.bottom, 5)
                     
-                    ChartsGraphView(viewModel: viewModel)
+                    ChartsHashView(viewModel: viewModel)
                         .padding(.horizontal)
+                        .padding(.bottom, 5)
+                    
+                    ChartsInfoCell(viewModel: viewModel, customSize: scaleScreen(115))
+                        .padding(.horizontal)
+                        .padding(.bottom, 5)
+                    
+                    ChartsRateView(viewModel: viewModel)
+                        .padding(.horizontal)
+                        .padding(.bottom, 5)
                 }
             }
             

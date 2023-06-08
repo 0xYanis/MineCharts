@@ -1,5 +1,5 @@
 //
-//  ChartsGraphView.swift
+//  ChartsHashView.swift
 //  MineCharts
 //
 //  Created by Yan Rybkin on 01.06.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct ChartsGraphView: View {
+struct ChartsHashView: View {
     
     @ObservedObject var viewModel: ChartsViewModel
     
@@ -60,7 +60,7 @@ struct ChartsGraphView: View {
     }
 }
 
-private extension ChartsGraphView {
+private extension ChartsHashView {
     @ViewBuilder
     func AnimatedChart() -> some View {
         if isLineGraph {
@@ -148,11 +148,11 @@ private extension ChartsGraphView {
 }
 
 
-struct ChartsGraphView_Previews: PreviewProvider {
+struct ChartsHashView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsGraphView(viewModel: ChartsViewModel())
+            ChartsHashView(viewModel: ChartsViewModel())
                 .preferredColorScheme(.dark)
         }
     }

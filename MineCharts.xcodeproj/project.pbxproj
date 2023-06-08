@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0909CC932A320D1D0005A4AB /* ChartsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */; };
+		0909CC952A321CC10005A4AB /* ChartsRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CC942A321CC10005A4AB /* ChartsRateView.swift */; };
 		0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324B2A25F7A600F813A2 /* PoolView.swift */; };
 		0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */; };
 		093932502A25F7C300F813A2 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324F2A25F7C300F813A2 /* PoolModel.swift */; };
@@ -15,7 +17,7 @@
 		094A43732A2901DE00E566F8 /* ChartsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A43722A2901DE00E566F8 /* ChartsGridCell.swift */; };
 		097E57CB2A31D956009F4CB4 /* ChartsMiningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */; };
 		097E57CD2A31DEFA009F4CB4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */; };
-		09E7E6DA2A28F647003F3B0D /* ChartsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7E6D92A28F647003F3B0D /* ChartsGraphView.swift */; };
+		09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */; };
 		09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */; };
 		09EF87632A24D6D000EC9D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87622A24D6D000EC9D7A /* Assets.xcassets */; };
 		09EF87662A24D6D000EC9D7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInfoCell.swift; sourceTree = "<group>"; };
+		0909CC942A321CC10005A4AB /* ChartsRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRateView.swift; sourceTree = "<group>"; };
 		0939324B2A25F7A600F813A2 /* PoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolView.swift; sourceTree = "<group>"; };
 		0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolViewModel.swift; sourceTree = "<group>"; };
 		0939324F2A25F7C300F813A2 /* PoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
@@ -39,7 +43,7 @@
 		094A43722A2901DE00E566F8 /* ChartsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsGridCell.swift; sourceTree = "<group>"; };
 		097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsMiningService.swift; sourceTree = "<group>"; };
 		097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		09E7E6D92A28F647003F3B0D /* ChartsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsGraphView.swift; sourceTree = "<group>"; };
+		09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsHashView.swift; sourceTree = "<group>"; };
 		09EF875B2A24D6CC00EC9D7A /* MineCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineChartsApp.swift; sourceTree = "<group>"; };
 		09EF87622A24D6D000EC9D7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,8 +85,10 @@
 		093932562A2662CA00F813A2 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				09E7E6D92A28F647003F3B0D /* ChartsGraphView.swift */,
+				09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */,
 				094A43722A2901DE00E566F8 /* ChartsGridCell.swift */,
+				0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */,
+				0909CC942A321CC10005A4AB /* ChartsRateView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -259,13 +265,15 @@
 			files = (
 				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
 				093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */,
-				09E7E6DA2A28F647003F3B0D /* ChartsGraphView.swift in Sources */,
+				09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */,
+				0909CC952A321CC10005A4AB /* ChartsRateView.swift in Sources */,
 				0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */,
 				09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */,
 				094A43732A2901DE00E566F8 /* ChartsGridCell.swift in Sources */,
 				09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */,
 				09EF87752A24DA7A00EC9D7A /* LoginModel.swift in Sources */,
 				09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */,
+				0909CC932A320D1D0005A4AB /* ChartsInfoCell.swift in Sources */,
 				09F879B52A28DAFA00E7545F /* Double+Extension.swift in Sources */,
 				09F879B32A28BF7200E7545F /* ChartsModel.swift in Sources */,
 				09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */,
