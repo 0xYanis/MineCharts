@@ -11,8 +11,8 @@ struct LoginView: View {
     
     //MARK: Private properties
     @StateObject private var viewModel: LoginViewModel = LoginViewModel()
-    @State private var isShowingModal = false
-    @State private var isEditing = false
+    @State private var isShowingModal: Bool = false
+    @State private var isEditing: Bool = false
     
     var body: some View {
         NavigationStack {
