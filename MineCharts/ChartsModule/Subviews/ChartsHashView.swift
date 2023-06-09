@@ -10,7 +10,7 @@ import Charts
 
 struct ChartsHashView: View {
     
-    @ObservedObject var viewModel: ChartsViewModel
+    @ObservedObject var model: ChartsViewModel
     
     @State private var isLineGraph: Bool = false
     @State private var hashTitle = ""
@@ -23,7 +23,7 @@ struct ChartsHashView: View {
                         .fontDesign(.rounded)
                         .fontWeight(.semibold)
                     
-                    Picker("", selection: $viewModel.currentTab) {
+                    Picker("", selection: $model.currentTab) {
                         Text("День")
                             .tag("День")
                         Text("Неделя")
@@ -36,7 +36,7 @@ struct ChartsHashView: View {
                 }
                 
                 HStack {
-                    let value = hashTitle.isEmpty ? "~\(viewModel.totalValue.stringFormat) Mh/s" : hashTitle
+                    let value = hashTitle.isEmpty ? "\(model.totalValue.stringFormat) Mh/s" : hashTitle
                     Text(value)
                         .fontDesign(.rounded)
                         .font(.largeTitle.bold())
@@ -64,7 +64,7 @@ private extension ChartsHashView {
     @ViewBuilder
     func AnimatedChart() -> some View {
         if isLineGraph {
-            Chart(viewModel.hashrate) {
+            Chart(model.hashrate) {
                 LineMark(
                     x: .value("Часы", $0.hour),
                     y: .value("Хешрейт", $0.hash)
@@ -82,7 +82,7 @@ private extension ChartsHashView {
                 createChartOverlay(proxy: proxy)
             }
         } else {
-            Chart(viewModel.hashrate) {
+            Chart(model.hashrate) {
                 BarMark(
                     x: .value("Часы", $0.hour),
                     y: .value("Хешрейт", $0.hash)
@@ -103,8 +103,8 @@ private extension ChartsHashView {
             var minDistance: TimeInterval = .infinity
             var index: Int? = nil
             
-            for salesDataIndex in viewModel.hashrate.indices {
-                let nthSalesDataDistance = viewModel.hashrate[salesDataIndex].hash.distance(to: value)
+            for salesDataIndex in model.hashrate.indices {
+                let nthSalesDataDistance = model.hashrate[salesDataIndex].hash.distance(to: value)
                 if abs(nthSalesDataDistance) < minDistance {
                     minDistance = abs(nthSalesDataDistance)
                     index = salesDataIndex
@@ -112,7 +112,7 @@ private extension ChartsHashView {
             }
             
             if let index {
-                return viewModel.hashrate[index].hash
+                return model.hashrate[index].hash
             }
         }
         
@@ -140,7 +140,7 @@ private extension ChartsHashView {
                             }
                         }
                         .onEnded { value in
-                            self.hashTitle = "~\(viewModel.totalValue.stringFormat) Mh/s"
+                            self.hashTitle = "\(model.totalValue.stringFormat) Mh/s"
                         }
                 )
         }
@@ -152,7 +152,7 @@ struct ChartsHashView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsHashView(viewModel: ChartsViewModel())
+            ChartsHashView(model: ChartsViewModel())
                 .preferredColorScheme(.dark)
         }
     }

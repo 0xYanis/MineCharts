@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartsGridCell: View {
     
-    @ObservedObject var viewModel: ChartsViewModel
+    @ObservedObject var model: ChartsViewModel
     var customSize: CGFloat
     
     var body: some View {
@@ -61,7 +61,7 @@ struct ChartsGridCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsGridCell(viewModel: ChartsViewModel(), customSize: 190)
+            ChartsGridCell(model: ChartsViewModel(), customSize: 190)
                 .preferredColorScheme(.dark)
         }
     }

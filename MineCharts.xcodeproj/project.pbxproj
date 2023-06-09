@@ -15,6 +15,7 @@
 		093932532A26619B00F813A2 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932522A26619B00F813A2 /* ChartsView.swift */; };
 		093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932542A2661D700F813A2 /* ChartsViewModel.swift */; };
 		094A43732A2901DE00E566F8 /* ChartsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A43722A2901DE00E566F8 /* ChartsGridCell.swift */; };
+		097A804B2A3323B300B5CF3A /* ChartsStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A804A2A3323B300B5CF3A /* ChartsStatsCell.swift */; };
 		097E57CB2A31D956009F4CB4 /* ChartsMiningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */; };
 		097E57CD2A31DEFA009F4CB4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */; };
 		09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */; };
@@ -41,6 +42,7 @@
 		093932522A26619B00F813A2 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		093932542A2661D700F813A2 /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		094A43722A2901DE00E566F8 /* ChartsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsGridCell.swift; sourceTree = "<group>"; };
+		097A804A2A3323B300B5CF3A /* ChartsStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsStatsCell.swift; sourceTree = "<group>"; };
 		097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsMiningService.swift; sourceTree = "<group>"; };
 		097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsHashView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				094A43722A2901DE00E566F8 /* ChartsGridCell.swift */,
 				0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */,
 				0909CC942A321CC10005A4AB /* ChartsRateView.swift */,
+				097A804A2A3323B300B5CF3A /* ChartsStatsCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097A804B2A3323B300B5CF3A /* ChartsStatsCell.swift in Sources */,
 				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
 				093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */,
 				09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */,

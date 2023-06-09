@@ -10,7 +10,7 @@ import Charts
 
 struct ChartsView: View {
     
-    @StateObject private var viewModel = ChartsViewModel()
+    @StateObject private var model = ChartsViewModel()
     
     var body: some View {
         NavigationStack {
@@ -18,22 +18,20 @@ struct ChartsView: View {
                 Color.backColor.ignoresSafeArea()
                 
                 ScrollView {
-                    ChartsGridCell(viewModel: viewModel, customSize: scaleScreen(170))
-                        .padding(.horizontal)
-                        .padding(.top, 15)
-                        .padding(.bottom, 5)
-                    
-                    ChartsHashView(viewModel: viewModel)
-                        .padding(.horizontal)
-                        .padding(.bottom, 5)
-                    
-                    ChartsInfoCell(viewModel: viewModel, customSize: scaleScreen(115))
-                        .padding(.horizontal)
-                        .padding(.bottom, 5)
-                    
-                    ChartsRateView(viewModel: viewModel)
-                        .padding(.horizontal)
-                        .padding(.bottom, 5)
+                    Group {
+                        ChartsStatsCell(model: model)
+                            .padding(.bottom, 5)
+                            .padding(.top, 15)
+                        ChartsGridCell(model: model, customSize: scaleScreen(170))
+                            .padding(.bottom, 5)
+                        ChartsHashView(model: model)
+                            .padding(.bottom, 5)
+                        ChartsInfoCell(model: model, customSize: scaleScreen(115))
+                            .padding(.bottom, 5)
+                        ChartsRateView(model: model)
+                            .padding(.bottom, 5)
+                    }
+                    .padding(.horizontal)
                 }
             }
             
@@ -47,16 +45,25 @@ struct ChartsView: View {
                     })
                 }
                 
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: {
+                        
+                    }, label: {
+                        Image(systemName: "newspaper.fill")
+                            .foregroundColor(.orange)
+                    })
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: {
                         
                     }, label: {
-                        Text("Шары")
+                        Image(systemName: "chart.bar.xaxis")
                             .foregroundColor(.orange)
                     })
                 }
             }
-            .navigationTitle(viewModel.getMinerName())
+            .navigationTitle(model.getMinerName())
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
         }

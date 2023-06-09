@@ -1,14 +1,13 @@
 //
-//  ChartsRateView.swift
+//  ChartsStatsCell.swift
 //  MineCharts
 //
-//  Created by Yan Rybkin on 08.06.2023.
+//  Created by Yan Rybkin on 09.06.2023.
 //
 
 import SwiftUI
-import Charts
 
-struct ChartsRateView: View {
+struct ChartsStatsCell: View {
     
     @ObservedObject var model: ChartsViewModel
     
@@ -16,18 +15,23 @@ struct ChartsRateView: View {
         VStack {
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
-                    Text("Курс ETC")
+                    Text("Монета: ETC (ETchash)")
                         .fontDesign(.rounded)
                         .fontWeight(.semibold)
-                    
                     Spacer()
                     
-                    Text("На сегодня: 01.06")
-                        .fontDesign(.rounded)
-                        .fontWeight(.semibold)
+                    NavigationLink {
+                        
+                    } label: {
+                        Text("Детально ")
+                            .foregroundColor(.orange)
+                            .fontDesign(.rounded)
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.forward")
+                            .foregroundColor(.orange)
+                    }
+
                 }
-                
-                AnimatedChart()
             }
             .padding()
             .background {
@@ -43,23 +47,19 @@ struct ChartsRateView: View {
     }
 }
 
-private extension ChartsRateView {
+private extension ChartsStatsCell {
     @ViewBuilder
-    func AnimatedChart() -> some View {
-        Chart(model.exchange) {
-            LineMark(x: .value("Часы", $0.hour),
-                     y: .value("Цена", $0.price)
-            )
-        }
+    func createStatsCell() -> some View {
+        
     }
 }
 
-struct ChartsRateView_Previews: PreviewProvider {
+struct ChartsStatsCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsRateView(model: ChartsViewModel())
-                .preferredColorScheme(.dark)
+            ChartsStatsCell(model: ChartsViewModel())
         }
+        .preferredColorScheme(.dark)
     }
 }

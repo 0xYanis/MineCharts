@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartsInfoCell: View {
     
-    @ObservedObject var viewModel: ChartsViewModel
+    @ObservedObject var model: ChartsViewModel
     var customSize: CGFloat
     
     var didTapWorkers: Bool = false
@@ -23,10 +23,13 @@ struct ChartsInfoCell: View {
                 GridRow {
                     Group {
                         chartsDataView("Воркеры", "в сети", shares: "2")
+                            .padding()
                         chartsDataView("Шары", "найдено", shares: "172")
+                            .padding()
                         chartsDataView("Выплаты", "за сегодня", shares: "3")
+                            .padding()
                     }
-                    .frame(width: customSize, height: customSize / 1.5)
+                    .frame(width: customSize, height: customSize / 1.3)
                     .background(Color.black)
                     .cornerRadius(15)
                 }
@@ -56,7 +59,7 @@ struct ChartsInfoCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsInfoCell(viewModel: ChartsViewModel(), customSize: 120)
+            ChartsInfoCell(model: ChartsViewModel(), customSize: 120)
                 .preferredColorScheme(.dark)
         }
     }
