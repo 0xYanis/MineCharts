@@ -77,6 +77,11 @@ private extension ChartsHashView {
                     y: .value("Хешрейт", $0.hash)
                 )
                 .foregroundStyle(.opacity(0.3))
+                
+                RuleMark(
+                        y: .value("Threshold", 48)
+                    )
+                    .foregroundStyle(.red)
             }
             .chartOverlay { proxy in
                 createChartOverlay(proxy: proxy)
@@ -88,6 +93,10 @@ private extension ChartsHashView {
                     y: .value("Хешрейт", $0.hash)
                 )
                 .foregroundStyle(.orange.gradient)
+                RuleMark(
+                        y: .value("Threshold", 48)
+                    )
+                    .foregroundStyle(.red)
             }
             .chartOverlay { proxy in
                 createChartOverlay(proxy: proxy)

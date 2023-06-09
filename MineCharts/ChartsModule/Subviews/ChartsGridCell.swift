@@ -17,7 +17,7 @@ struct ChartsGridCell: View {
             Grid(horizontalSpacing: 20) {
                 GridRow {
                     Group {
-                        chartsProfitView(profit: "0.0412")
+                        chartsProfitView(profit: "$ 2.1412")
                             .frame(width: customSize, height: customSize / 2)
                         
                         chartsHashView(power: "43 Mh/s")
@@ -37,6 +37,9 @@ private extension ChartsGridCell {
             Text("Доходность")
                 .foregroundColor(.orange)
                 .padding(.top, 5)
+            Text("В день")
+                .font(.footnote)
+                .foregroundColor(.orange)
             Spacer()
             Text(profit)
                 .font(.system(size: 28, weight: .bold, design: .rounded))
@@ -49,6 +52,9 @@ private extension ChartsGridCell {
             Text("Мощность")
                 .foregroundColor(.orange)
                 .padding(.top, 5)
+            Text("Сейчас")
+                .font(.footnote)
+                .foregroundColor(.orange)
             Spacer()
             Text(power)
                 .font(.system(size: 28, weight: .bold, design: .rounded))
