@@ -47,7 +47,7 @@ struct ChartsView: View {
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink(destination: {
-                        
+                        NewsView()
                     }, label: {
                         Image(systemName: "newspaper.fill")
                             .foregroundColor(.orange)

@@ -18,9 +18,11 @@ struct ChartsGridCell: View {
                 GridRow {
                     Group {
                         chartsProfitView(profit: "$ 2.1412")
+                            .padding(.vertical)
                             .frame(width: customSize, height: customSize / 2)
                         
                         chartsHashView(power: "43 Mh/s")
+                            .padding(.vertical)
                             .frame(width: customSize, height: customSize / 2)
                     }
                     .background(Color.black)
