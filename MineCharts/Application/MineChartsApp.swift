@@ -9,7 +9,13 @@ import SwiftUI
 
 @main
 struct MineChartsApp: App {
-    let userDefaults = UserDefaults.standard
+    private let userDefaults = UserDefaults.standard
+    private let notify = NotificationHandler()
+    
+    init() {
+        notify.askPermission()
+        notify.sendNotification(date: Date(), type: "time", title: "Сложность падает!", body: "На данный момент в сети ETC наблюдается значительное движение сложности сети вниз.")
+    }
     
     var body: some Scene {
         WindowGroup {
