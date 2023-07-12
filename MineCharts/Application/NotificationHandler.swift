@@ -10,8 +10,14 @@ import UserNotifications
 
 final class NotificationHandler {
     
+    private let options: UNAuthorizationOptions = [
+        .alert, .badge, .sound
+    ]
+    
     func askPermission() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+        UNUserNotificationCenter
+            .current()
+            .requestAuthorization(options: options) { success, error in
             if success {
                 print("Access granted!")
             } else if let error = error {
@@ -83,4 +89,5 @@ private extension NotificationHandler {
             trigger: trigger
         )
     }
+    
 }

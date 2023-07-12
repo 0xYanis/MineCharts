@@ -15,38 +15,45 @@ struct NewsView: View {
         NavigationStack {
             ZStack {
                 Color.backColor.ignoresSafeArea()
-                VStack {
-                    List {
-                        ForEach(model.lastNews) { item in
-                            HStack {
-                                AsyncImage(url: URL(string: item.image))
-                                    .fixedSize()
-                                    .frame(width: 80, height: 80)
-                                    .scaledToFill()
-                                    .cornerRadius(15)
-                                
-                                
-                                VStack(alignment: .leading) {
-                                    Text(item.title)
-                                    
-                                    Text(item.newsText)
-                                        .foregroundColor(.gray)
-                                        .font(.caption2)
-                                        .lineLimit(3)
-                                }
-                            }
-                        }
-                        .onDelete(perform: model.deleteNews(at:))
-                        .listRowBackground(Color.backColor)
-                    }
-                    .listStyle(.plain)
-                }
+                feedView()
             }
             
             .navigationTitle("Последние новости")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
+    @ViewBuilder
+    func feedView() -> some View {
+        VStack {
+            List {
+                ForEach(model.lastNews) { item in
+                    HStack {
+                        AsyncImage(url: URL(string: item.image))
+                            .fixedSize()
+                            .frame(width: 80, height: 80)
+                            .scaledToFill()
+                            .cornerRadius(15)
+                        
+                        
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                            
+                            Text(item.newsText)
+                                .foregroundColor(.gray)
+                                .font(.caption2)
+                                .lineLimit(3)
+                        }
+                    }
+                }
+                .onDelete(perform: model.deleteNews(at:))
+                .listRowBackground(Color.backColor)
+            }
+            .listStyle(.plain)
+        }
+    }
+    
+    
 }
 
 struct NewsView_Previews: PreviewProvider {

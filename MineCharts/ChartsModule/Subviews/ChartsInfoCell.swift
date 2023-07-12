@@ -39,7 +39,12 @@ struct ChartsInfoCell: View {
 }
 
 private extension ChartsInfoCell {
-    func chartsDataView(_ label: String,_ subLabel: String, shares: String) -> some View {
+    @ViewBuilder
+    func chartsDataView(
+        _ label: String,
+        _ subLabel: String,
+        shares: String
+    ) -> some View {
         VStack {
             Text(label)
                 .foregroundColor(.orange)

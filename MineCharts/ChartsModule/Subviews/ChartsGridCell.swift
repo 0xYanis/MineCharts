@@ -34,6 +34,7 @@ struct ChartsGridCell: View {
 }
 
 private extension ChartsGridCell {
+    @ViewBuilder
     func chartsProfitView(profit: String) -> some View {
         VStack {
             Text("Доходность")
@@ -49,6 +50,7 @@ private extension ChartsGridCell {
         }
     }
     
+    @ViewBuilder
     func chartsHashView(power: String) -> some View {
         VStack {
             Text("Мощность")

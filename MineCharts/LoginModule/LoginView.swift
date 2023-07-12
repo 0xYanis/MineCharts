@@ -94,6 +94,7 @@ struct LoginView: View {
 
 //MARK: - Private methods
 private extension LoginView {
+    @ViewBuilder
     func customText(text: String) -> some View {
         HStack {
             Text(text)
@@ -109,7 +110,7 @@ private extension LoginView {
         .padding(.horizontal, 30)
     }
     
-    
+    @ViewBuilder
     func customTextField(_ label: String, text: Binding<String>) -> some View {
         VStack {
             HStack {
