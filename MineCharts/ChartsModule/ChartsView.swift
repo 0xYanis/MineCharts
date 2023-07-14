@@ -36,38 +36,45 @@ struct ChartsView: View {
             }
             
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: {
-                        
-                    }, label: {
-                        Image(systemName: "person.crop.circle")
-                            .foregroundColor(.orange)
-                    })
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: {
-                        NewsView()
-                    }, label: {
-                        Image(systemName: "newspaper.fill")
-                            .foregroundColor(.orange)
-                    })
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: {
-                        
-                    }, label: {
-                        Image(systemName: "chart.bar.xaxis")
-                            .foregroundColor(.orange)
-                    })
-                }
+                toolbarItems()
             }
+            
             .navigationTitle(model.getMinerName())
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
+    @ToolbarContentBuilder
+    func toolbarItems() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            NavigationLink(destination: {
+                
+            }, label: {
+                Image(systemName: "person.crop.circle")
+                    .foregroundColor(.orange)
+            })
+        }
+        
+        ToolbarItem(placement: .navigationBarLeading) {
+            NavigationLink(destination: {
+                NewsView()
+            }, label: {
+                Image(systemName: "newspaper.fill")
+                    .foregroundColor(.orange)
+            })
+        }
+        
+        ToolbarItem(placement: .navigationBarTrailing) {
+            NavigationLink(destination: {
+                
+            }, label: {
+                Image(systemName: "chart.bar.xaxis")
+                    .foregroundColor(.orange)
+            })
+        }
+    }
+    
 }
 
 private extension ChartsView {
@@ -76,10 +83,6 @@ private extension ChartsView {
         return value * x
     }
 }
-
-
-
-
 
 struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
