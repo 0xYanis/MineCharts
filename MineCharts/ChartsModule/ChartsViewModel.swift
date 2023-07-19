@@ -16,9 +16,14 @@ final class ChartsViewModel: ObservableObject {
     @Published var currentActiveItem: ChartsModel?
     @Published var totalValue: Double = 0.0
     
+    private var service: ChartsMiningServiceProtocol
+    
     private var cancellables: Set<AnyCancellable> = []
 
-    init() {
+    init(
+        service: ChartsMiningServiceProtocol = ChartsMiningService()
+    ) {
+        self.service = service
         $hashrate.combineLatest($currentTab)
             .sink { [unowned self] (hashrate, currentTab) in
                 let averageHash = hashrate

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChartsModel: Identifiable {
+struct ChartsModel: Identifiable, Codable {
     var id = UUID()
     var hour: Date
     var hash: Double
