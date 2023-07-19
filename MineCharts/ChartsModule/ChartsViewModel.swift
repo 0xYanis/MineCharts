@@ -20,9 +20,10 @@ final class ChartsViewModel: ObservableObject {
 
     init() {
         $hashrate.combineLatest($currentTab)
-            .sink { [weak self] (hashrate, currentTab) in
-                let averageHash = hashrate.reduce(0.0) { $0 + $1.hash } / Double(hashrate.count)
-                self?.totalValue = averageHash
+            .sink { [unowned self] (hashrate, currentTab) in
+                let averageHash = hashrate
+                    .reduce(0.0) { $0 + $1.hash } / Double(hashrate.count)
+                self.totalValue = averageHash
             }
             .store(in: &cancellables)
     }
@@ -31,4 +32,5 @@ final class ChartsViewModel: ObservableObject {
         let name = UserDefaults.standard.string(forKey: "minerName") ?? "Miner"
         return name
     }
+    
 }

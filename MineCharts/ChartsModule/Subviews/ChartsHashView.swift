@@ -160,8 +160,7 @@ private extension ChartsHashView {
 struct ChartsHashView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.backColor.ignoresSafeArea()
-            ChartsHashView(model: ChartsViewModel())
+            ChartsView()
                 .preferredColorScheme(.dark)
         }
     }

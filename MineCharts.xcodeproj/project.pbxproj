@@ -31,7 +31,6 @@
 		09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */; };
 		09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF877A2A24DB3F00EC9D7A /* LoginView.swift */; };
 		09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87972A2500C300EC9D7A /* Color+Extension.swift */; };
-		09F879B12A28BA3100E7545F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 09F879B02A28BA3100E7545F /* Alamofire */; };
 		09F879B32A28BF7200E7545F /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F879B22A28BF7200E7545F /* ChartsModel.swift */; };
 		09F879B52A28DAFA00E7545F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F879B42A28DAFA00E7545F /* Double+Extension.swift */; };
 		09FF449A2A2513E8002CBA8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF44992A2513E8002CBA8C /* APIService.swift */; };
@@ -75,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09F879B12A28BA3100E7545F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +228,6 @@
 			);
 			name = MineCharts;
 			packageProductDependencies = (
-				09F879B02A28BA3100E7545F /* Alamofire */,
 			);
 			productName = MineCharts;
 			productReference = 09EF875B2A24D6CC00EC9D7A /* MineCharts.app */;
@@ -261,7 +258,6 @@
 			);
 			mainGroup = 09EF87522A24D6CC00EC9D7A;
 			packageReferences = (
-				09F879AF2A28BA3100E7545F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 09EF875C2A24D6CC00EC9D7A /* Products */;
 			projectDirPath = "";
@@ -521,25 +517,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		09F879AF2A28BA3100E7545F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		09F879B02A28BA3100E7545F /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 09F879AF2A28BA3100E7545F /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09EF87532A24D6CC00EC9D7A /* Project object */;
 }
