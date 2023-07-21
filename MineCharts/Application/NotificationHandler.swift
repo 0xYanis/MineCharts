@@ -39,6 +39,8 @@ final class NotificationHandler {
         let request = createNotificationRequest(content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
+    
+    
 }
 
 private extension NotificationHandler {
@@ -89,5 +91,6 @@ private extension NotificationHandler {
             trigger: trigger
         )
     }
+    
     
 }

@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct LoginModel: Codable, Equatable {
-    
+struct LoginModel: {
+    var minerName: String
+    var walletHash: String
+    var showButton: Bool
+    var isButtonTapped: Bool
 }
