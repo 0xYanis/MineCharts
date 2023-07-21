@@ -22,6 +22,7 @@
 		097A80542A332B0A00B5CF3A /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A80532A332B0A00B5CF3A /* NewsService.swift */; };
 		097E57CB2A31D956009F4CB4 /* ChartsMiningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */; };
 		097E57CD2A31DEFA009F4CB4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */; };
+		098F285F2A6B1AD800EFE56D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F285E2A6B1AD800EFE56D /* CustomTextField.swift */; };
 		09AAE0302A3489540026535A /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE02F2A3489540026535A /* NotificationHandler.swift */; };
 		09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */; };
 		09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */; };
@@ -52,6 +53,7 @@
 		097A80532A332B0A00B5CF3A /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsMiningService.swift; sourceTree = "<group>"; };
 		097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		098F285E2A6B1AD800EFE56D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		09AAE02F2A3489540026535A /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsHashView.swift; sourceTree = "<group>"; };
 		09EF875B2A24D6CC00EC9D7A /* MineCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */,
+				098F285E2A6B1AD800EFE56D /* CustomTextField.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098F285F2A6B1AD800EFE56D /* CustomTextField.swift in Sources */,
 				097A80522A332AFE00B5CF3A /* NewsModel.swift in Sources */,
 				097A804B2A3323B300B5CF3A /* ChartsStatsCell.swift in Sources */,
 				097A804E2A332AE800B5CF3A /* NewsView.swift in Sources */,

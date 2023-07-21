@@ -23,60 +23,7 @@ struct LoginView: View {
                 Circle()
                     .position(x:100, y: 0)
                     .foregroundColor(.orange)
-                
-                VStack {
-                    customText(text: "Привет,\nМайнер !")
-                    Spacer()
-                    
-                    customTextField("Дайте имя майнеру...", text: $viewModel.minerName)
-                        .padding(.vertical, 20)
-                    customTextField("Введите хэш кошелька...", text: $viewModel.walletHash)
-                    Spacer()
-                    
-                    HStack {
-                        Button(action: {
-                            isEditing.toggle()
-                            hideKeyboard()
-                            isShowingModal.toggle()
-                        }, label: {
-                            Text("Что это?")
-                                .font(.system(
-                                    size: 20,
-                                    weight: .bold,
-                                    design: .default)
-                                )
-                                .foregroundColor(.orange)
-                                .padding()
-                            
-                        }).sheet(isPresented: $isShowingModal) {
-                            LoginInfoView()
-                                .presentationDetents([.fraction(0.6)])
-                        }
-                        
-                        
-                        Spacer()
-                        
-                        
-                        NavigationLink(
-                            destination: PoolView()
-                                .onAppear {
-                                    viewModel.buttonPressed()
-                                },
-                            label: {
-                                Text("Начнем!")
-                                    .font(.system(size: 20, weight: .bold, design: .default))
-                                    .foregroundColor(.white)
-                                    .frame(height: 50)
-                                    .padding(.horizontal)
-                                    .background(Color.orange)
-                                    .cornerRadius(25)
-                            })
-                            .opacity(viewModel.showButton ? 0.5 : 1.0)
-                            .disabled(viewModel.showButton)
-                    }
-                    .padding(.horizontal, 30)
-                    Spacer()
-                }
+                loginScreen()
                 .padding(.top, 180)
             }
             
@@ -90,10 +37,69 @@ struct LoginView: View {
             }
         }
     }
+    
 }
 
 //MARK: - Private methods
 private extension LoginView {
+    
+    @ViewBuilder
+    private func loginScreen() -> some View {
+        VStack {
+            customText(text: "Привет,\nМайнер !")
+            Spacer()
+            
+            TextField("Дайте имя майнеру...", text: $viewModel.minerName)
+                .modifier(CustomTextField())
+                .padding(.vertical, 20)
+            TextField("Дайте имя майнеру...", text: $viewModel.minerName)
+                .modifier(CustomTextField())
+            Spacer()
+            
+            HStack {
+                Button(action: {
+                    isEditing.toggle()
+                    hideKeyboard()
+                    isShowingModal.toggle()
+                }, label: {
+                    Text("Что это?")
+                        .font(.system(
+                            size: 20,
+                            weight: .bold,
+                            design: .default)
+                        )
+                        .foregroundColor(.orange)
+                        .padding()
+                    
+                }).sheet(isPresented: $isShowingModal) {
+                    LoginInfoView()
+                        .presentationDetents([.fraction(0.6)])
+                }
+                
+                Spacer()
+                
+                NavigationLink(
+                    destination: PoolView()
+                        .onAppear {
+                            viewModel.buttonPressed()
+                        },
+                    label: {
+                        Text("Начнем!")
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .foregroundColor(.white)
+                            .frame(height: 50)
+                            .padding(.horizontal)
+                            .background(Color.orange)
+                            .cornerRadius(25)
+                    })
+                    .opacity(viewModel.showButton ? 0.5 : 1.0)
+                    .disabled(viewModel.showButton)
+            }
+            .padding(.horizontal, 30)
+            Spacer()
+        }
+    }
+    
     @ViewBuilder
     func customText(text: String) -> some View {
         HStack {
@@ -110,24 +116,6 @@ private extension LoginView {
         .padding(.horizontal, 30)
     }
     
-    @ViewBuilder
-    func customTextField(_ label: String, text: Binding<String>) -> some View {
-        VStack {
-            HStack {
-                TextField(label, text: text)
-            }
-            .keyboardType(.alphabet)
-            .padding(.horizontal, 15)
-            .font(.system(size: 20))
-            .frame(height: 50)
-            .cornerRadius(25)
-            .overlay(RoundedRectangle(cornerRadius: 25)
-                .stroke(Color.orange, lineWidth: 2))
-            .padding(.horizontal, 30)
-        }
-    }
-    
-    
     func hideKeyboard() {
         UIApplication.shared.sendAction(
             #selector(UIResponder.resignFirstResponder),
@@ -136,8 +124,8 @@ private extension LoginView {
             for: nil
         )
     }
+    
 }
-
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
