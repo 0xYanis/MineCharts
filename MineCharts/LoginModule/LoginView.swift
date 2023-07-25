@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     //MARK: Private properties
-    @StateObject private var viewModel: LoginViewModel = LoginViewModel()
+    @StateObject private var viewModel = LoginViewModel()
     @State private var isShowingModal: Bool = false
     @State private var isEditing: Bool = false
     
@@ -35,6 +35,7 @@ struct LoginView: View {
                         .frame(width: 80, height: 80)
                 }
             }
+            
         }
     }
     
@@ -44,7 +45,7 @@ struct LoginView: View {
 private extension LoginView {
     
     @ViewBuilder
-    private func loginScreen() -> some View {
+    func loginScreen() -> some View {
         VStack {
             customText(text: "Привет,\nМайнер !")
             Spacer()

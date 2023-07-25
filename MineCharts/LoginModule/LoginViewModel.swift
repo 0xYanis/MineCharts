@@ -32,5 +32,6 @@ final class LoginViewModel: ObservableObject {
         let authToken = "authToken"
         standard.set(authToken, forKey: "authToken")
     }
+    
 }
 
