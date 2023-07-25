@@ -51,10 +51,10 @@ private extension LoginView {
             Spacer()
             
             TextField("Дайте имя майнеру...", text: $viewModel.minerName)
-                .modifier(CustomTextField())
+                .customTextField()
                 .padding(.vertical, 20)
             TextField("Дайте имя майнеру...", text: $viewModel.minerName)
-                .modifier(CustomTextField())
+                .customTextField()
             Spacer()
             
             HStack {

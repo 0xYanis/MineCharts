@@ -20,3 +20,9 @@ struct CustomTextField : ViewModifier {
             .padding(.horizontal, 30)
     }
 }
+
+extension View {
+    func customTextField() -> some View {
+        self.modifier(CustomTextField())
+    }
+}
