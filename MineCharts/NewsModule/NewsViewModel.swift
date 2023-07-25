@@ -10,10 +10,12 @@ import Combine
 
 final class NewsViewModel: ObservableObject {
     
-    private var newsService: NewsServiceProtocol
+    private var newsService: NewsApiServiceProtocol
     @Published var lastNews: [NewsModel] = fakeNews
     
-    init(newsService: NewsServiceProtocol = NewsService()) {
+    init(
+        newsService: NewsApiServiceProtocol = NewsApiService()
+    ) {
         self.newsService = newsService
     }
     
