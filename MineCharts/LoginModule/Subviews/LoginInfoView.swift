@@ -25,16 +25,8 @@ struct LoginInfoView: View {
             }
             
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        dismiss()
-                    }, label: {
-                        Text("Понятно")
-                            .foregroundColor(.orange)
-                    })
-                }
+                toolbarItems()
             }
-            
             .navigationBarTitle("Описание")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -61,6 +53,16 @@ struct LoginInfoView: View {
         }
     }
     
+    @ToolbarContentBuilder
+    private func toolbarItems() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            Button(action: {
+                dismiss()
+            }, label: {
+                Text("Понятно").foregroundColor(.orange)
+            })
+        }
+    }
     
 }
 
