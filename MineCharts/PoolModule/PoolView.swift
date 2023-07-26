@@ -27,7 +27,7 @@ struct PoolView: View {
     }
     
     @ViewBuilder
-    func poolScreen() -> some View {
+    private func poolScreen() -> some View {
         VStack {
             Spacer()
             
