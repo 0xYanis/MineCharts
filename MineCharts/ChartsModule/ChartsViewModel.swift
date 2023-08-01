@@ -24,8 +24,12 @@ final class ChartsViewModel: ObservableObject {
         service: ChartsMiningServiceProtocol = ChartsMiningService()
     ) {
         self.service = service
+        configureCurrentHash()
+    }
+    
+    private func configureCurrentHash() {
         $hashrate.combineLatest($currentTab)
-            .sink { [unowned self] (hashrate, currentTab) in
+            .sink { [unowned self] (hashrate, _) in
                 let averageHash = hashrate
                     .reduce(0.0) { $0 + $1.hash } / Double(hashrate.count)
                 self.totalValue = averageHash
@@ -34,8 +38,13 @@ final class ChartsViewModel: ObservableObject {
     }
     
     func getMinerName() -> String {
-        let name = UserDefaults.standard.string(forKey: "minerName") ?? "Miner"
-        return name
+        let key = "minerName"
+        let userData = UserDefaults.standard
+        return userData.string(forKey: key) ?? "Miner"
+    }
+    
+    deinit {
+        cancellables.removeAll()
     }
     
 }
