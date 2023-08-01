@@ -13,15 +13,18 @@ final class LoginViewModel: ObservableObject {
     @Published var minerName = ""
     @Published var walletHash = ""
     @Published var showButton = false
-    @Published var isButtonTapped = false
+    
+    private var cancellable: AnyCancellable?
     
     init() {
-        $minerName
+        cancellable = $minerName
             .combineLatest($walletHash)
             .map { name, hash in
                 name.count < 4 || hash.count < 4
             }
-            .assign(to: &$showButton)
+            .sink { [unowned self] canShow in
+                showButton = canShow
+            }
     }
     
     func buttonPressed() {
@@ -31,6 +34,9 @@ final class LoginViewModel: ObservableObject {
         
         let authToken = "authToken"
         standard.set(authToken, forKey: "authToken")
+        
+        cancellable?.cancel()
+        cancellable = nil
     }
     
 }
