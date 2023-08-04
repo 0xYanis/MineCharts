@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct NewsView: View {
     
@@ -29,11 +30,11 @@ struct NewsView: View {
             List {
                 ForEach(model.lastNews) { item in
                     HStack {
-                        AsyncImage(url: URL(string: item.image))
-                            .fixedSize()
+                        KFImage(URL(string: item.image))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: 80, height: 80)
-                            .scaledToFill()
-                            .cornerRadius(15)
+                            .cornerRadius(4)
                         
                         
                         VStack(alignment: .leading) {
