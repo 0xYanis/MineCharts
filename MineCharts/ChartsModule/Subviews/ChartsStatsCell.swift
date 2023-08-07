@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartsStatsCell: View {
     
-    @ObservedObject var model: ChartsViewModel
+    @EnvironmentObject private var model: ChartsViewModel
     
     var body: some View {
         VStack {

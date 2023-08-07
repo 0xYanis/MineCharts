@@ -10,7 +10,7 @@ import Charts
 
 struct ChartsHashView: View {
     
-    @ObservedObject var model: ChartsViewModel
+    @EnvironmentObject private var model: ChartsViewModel
     
     @State private var isLineGraph: Bool = false
     @State private var hashTitle = ""

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ChartsInfoCell: View {
     
-    @ObservedObject var model: ChartsViewModel
+    @EnvironmentObject private var model: ChartsViewModel
+    
     var customSize: CGFloat
     
     var didTapWorkers: Bool = false

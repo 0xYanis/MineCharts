@@ -19,16 +19,16 @@ struct ChartsView: View {
                 
                 ScrollView {
                     Group {
-                        ChartsStatsCell(model: model)
+                        ChartsStatsCell()
                             .padding(.bottom, 5)
                             .padding(.top, 15)
-                        ChartsGridCell(model: model, customSize: scaleScreen(170))
+                        ChartsGridCell(customSize: scaleScreen(170))
                             .padding(.bottom, 5)
-                        ChartsHashView(model: model)
+                        ChartsHashView()
                             .padding(.bottom, 5)
-                        ChartsInfoCell(model: model, customSize: scaleScreen(115))
+                        ChartsInfoCell(customSize: scaleScreen(115))
                             .padding(.bottom, 5)
-                        ChartsRateView(model: model)
+                        ChartsRateView()
                             .padding(.bottom, 5)
                     }
                     .padding(.horizontal)
@@ -43,6 +43,7 @@ struct ChartsView: View {
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
         }
+        .environmentObject(model)
     }
     
     @ToolbarContentBuilder
