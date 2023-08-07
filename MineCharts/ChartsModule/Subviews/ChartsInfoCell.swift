@@ -65,7 +65,7 @@ struct ChartsInfoCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsInfoCell(model: ChartsViewModel(), customSize: 120)
+            ChartsInfoCell(customSize: 120)
                 .preferredColorScheme(.dark)
         }
     }

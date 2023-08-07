@@ -58,7 +58,7 @@ struct ChartsStatsCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backColor.ignoresSafeArea()
-            ChartsStatsCell(model: ChartsViewModel())
+            ChartsStatsCell()
         }
         .preferredColorScheme(.dark)
     }
