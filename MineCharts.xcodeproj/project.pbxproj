@@ -7,65 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0909CC932A320D1D0005A4AB /* ChartsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */; };
-		0909CC952A321CC10005A4AB /* ChartsRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909CC942A321CC10005A4AB /* ChartsRateView.swift */; };
-		0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324B2A25F7A600F813A2 /* PoolView.swift */; };
-		0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */; };
-		093932502A25F7C300F813A2 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0939324F2A25F7C300F813A2 /* PoolModel.swift */; };
-		093932532A26619B00F813A2 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932522A26619B00F813A2 /* ChartsView.swift */; };
-		093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093932542A2661D700F813A2 /* ChartsViewModel.swift */; };
-		094A43732A2901DE00E566F8 /* ChartsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A43722A2901DE00E566F8 /* ChartsGridCell.swift */; };
 		096178252A7D1815002CA8A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 096178242A7D1815002CA8A6 /* Kingfisher */; };
-		097A804B2A3323B300B5CF3A /* ChartsStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A804A2A3323B300B5CF3A /* ChartsStatsCell.swift */; };
-		097A804E2A332AE800B5CF3A /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A804D2A332AE700B5CF3A /* NewsView.swift */; };
-		097A80502A332AF400B5CF3A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A804F2A332AF400B5CF3A /* NewsViewModel.swift */; };
-		097A80522A332AFE00B5CF3A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A80512A332AFE00B5CF3A /* NewsModel.swift */; };
-		097A80542A332B0A00B5CF3A /* NewsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A80532A332B0A00B5CF3A /* NewsApiService.swift */; };
-		097E57CB2A31D956009F4CB4 /* ChartsMiningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */; };
-		097E57CD2A31DEFA009F4CB4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */; };
-		098F285F2A6B1AD800EFE56D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F285E2A6B1AD800EFE56D /* CustomTextField.swift */; };
-		09AAE0302A3489540026535A /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE02F2A3489540026535A /* NotificationHandler.swift */; };
-		09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */; };
+		09ADAA082B02959200107F74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA072B02959200107F74 /* ContentView.swift */; };
 		09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */; };
 		09EF87632A24D6D000EC9D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87622A24D6D000EC9D7A /* Assets.xcassets */; };
 		09EF87662A24D6D000EC9D7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */; };
-		09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */; };
-		09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF877A2A24DB3F00EC9D7A /* LoginView.swift */; };
-		09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF87972A2500C300EC9D7A /* Color+Extension.swift */; };
-		09F879B32A28BF7200E7545F /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F879B22A28BF7200E7545F /* ChartsModel.swift */; };
-		09F879B52A28DAFA00E7545F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F879B42A28DAFA00E7545F /* Double+Extension.swift */; };
-		09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsInfoCell.swift; sourceTree = "<group>"; };
-		0909CC942A321CC10005A4AB /* ChartsRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRateView.swift; sourceTree = "<group>"; };
-		0939324B2A25F7A600F813A2 /* PoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolView.swift; sourceTree = "<group>"; };
-		0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolViewModel.swift; sourceTree = "<group>"; };
-		0939324F2A25F7C300F813A2 /* PoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
-		093932522A26619B00F813A2 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
-		093932542A2661D700F813A2 /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
-		094A43722A2901DE00E566F8 /* ChartsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsGridCell.swift; sourceTree = "<group>"; };
-		097A804A2A3323B300B5CF3A /* ChartsStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsStatsCell.swift; sourceTree = "<group>"; };
-		097A804D2A332AE700B5CF3A /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		097A804F2A332AF400B5CF3A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
-		097A80512A332AFE00B5CF3A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
-		097A80532A332B0A00B5CF3A /* NewsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiService.swift; sourceTree = "<group>"; };
-		097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsMiningService.swift; sourceTree = "<group>"; };
-		097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		098F285E2A6B1AD800EFE56D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		09AAE02F2A3489540026535A /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
-		09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsHashView.swift; sourceTree = "<group>"; };
+		09ADAA072B02959200107F74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09EF875B2A24D6CC00EC9D7A /* MineCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineChartsApp.swift; sourceTree = "<group>"; };
 		09EF87622A24D6D000EC9D7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		09EF877A2A24DB3F00EC9D7A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		09EF87972A2500C300EC9D7A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		09F879B22A28BF7200E7545F /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
-		09F879B42A28DAFA00E7545F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
-		09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,39 +34,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		093932512A26617900F813A2 /* ChartsModule */ = {
+		09ADAA062B02953B00107F74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				093932562A2662CA00F813A2 /* Subviews */,
-				093932522A26619B00F813A2 /* ChartsView.swift */,
-				093932542A2661D700F813A2 /* ChartsViewModel.swift */,
-				09F879B22A28BF7200E7545F /* ChartsModel.swift */,
-				097E57CA2A31D956009F4CB4 /* ChartsMiningService.swift */,
+				09ADAA072B02959200107F74 /* ContentView.swift */,
 			);
-			path = ChartsModule;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		093932562A2662CA00F813A2 /* Subviews */ = {
+		09ADAA092B0295B700107F74 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				09E7E6D92A28F647003F3B0D /* ChartsHashView.swift */,
-				094A43722A2901DE00E566F8 /* ChartsGridCell.swift */,
-				0909CC922A320D1D0005A4AB /* ChartsInfoCell.swift */,
-				0909CC942A321CC10005A4AB /* ChartsRateView.swift */,
-				097A804A2A3323B300B5CF3A /* ChartsStatsCell.swift */,
+				09EF87622A24D6D000EC9D7A /* Assets.xcassets */,
+				09EF87642A24D6D000EC9D7A /* Preview Content */,
 			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		097A804C2A332AD400B5CF3A /* NewsModule */ = {
-			isa = PBXGroup;
-			children = (
-				097A804D2A332AE700B5CF3A /* NewsView.swift */,
-				097A804F2A332AF400B5CF3A /* NewsViewModel.swift */,
-				097A80512A332AFE00B5CF3A /* NewsModel.swift */,
-				097A80532A332B0A00B5CF3A /* NewsApiService.swift */,
-			);
-			path = NewsModule;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		09EF87522A24D6CC00EC9D7A = {
@@ -135,13 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				09EF87702A24D97200EC9D7A /* Application */,
-				097A804C2A332AD400B5CF3A /* NewsModule */,
-				093932512A26617900F813A2 /* ChartsModule */,
-				09EF87732A24DA2A00EC9D7A /* PoolModule */,
-				09EF87722A24DA1F00EC9D7A /* LoginModule */,
-				09EF87622A24D6D000EC9D7A /* Assets.xcassets */,
-				09EF87642A24D6D000EC9D7A /* Preview Content */,
-				09EF87962A2500AE00EC9D7A /* Helpers */,
+				09ADAA062B02953B00107F74 /* Modules */,
+				09ADAA092B0295B700107F74 /* Resources */,
 			);
 			path = MineCharts;
 			sourceTree = "<group>";
@@ -158,48 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				09EF875E2A24D6CC00EC9D7A /* MineChartsApp.swift */,
-				09AAE02F2A3489540026535A /* NotificationHandler.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		09EF87722A24DA1F00EC9D7A /* LoginModule */ = {
-			isa = PBXGroup;
-			children = (
-				09FF449E2A2522D8002CBA8C /* Subviews */,
-				09EF877A2A24DB3F00EC9D7A /* LoginView.swift */,
-				09EF87762A24DA8400EC9D7A /* LoginViewModel.swift */,
-			);
-			path = LoginModule;
-			sourceTree = "<group>";
-		};
-		09EF87732A24DA2A00EC9D7A /* PoolModule */ = {
-			isa = PBXGroup;
-			children = (
-				0939324B2A25F7A600F813A2 /* PoolView.swift */,
-				0939324D2A25F7BA00F813A2 /* PoolViewModel.swift */,
-				0939324F2A25F7C300F813A2 /* PoolModel.swift */,
-			);
-			path = PoolModule;
-			sourceTree = "<group>";
-		};
-		09EF87962A2500AE00EC9D7A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				09EF87972A2500C300EC9D7A /* Color+Extension.swift */,
-				09F879B42A28DAFA00E7545F /* Double+Extension.swift */,
-				097E57CC2A31DEFA009F4CB4 /* Date+Extension.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		09FF449E2A2522D8002CBA8C /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				09FF449F2A2522F4002CBA8C /* LoginInfoView.swift */,
-				098F285E2A6B1AD800EFE56D /* CustomTextField.swift */,
-			);
-			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,31 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				098F285F2A6B1AD800EFE56D /* CustomTextField.swift in Sources */,
-				097A80522A332AFE00B5CF3A /* NewsModel.swift in Sources */,
-				097A804B2A3323B300B5CF3A /* ChartsStatsCell.swift in Sources */,
-				097A804E2A332AE800B5CF3A /* NewsView.swift in Sources */,
-				09EF87772A24DA8400EC9D7A /* LoginViewModel.swift in Sources */,
-				093932552A2661D700F813A2 /* ChartsViewModel.swift in Sources */,
-				09E7E6DA2A28F647003F3B0D /* ChartsHashView.swift in Sources */,
-				0909CC952A321CC10005A4AB /* ChartsRateView.swift in Sources */,
-				0939324C2A25F7A600F813A2 /* PoolView.swift in Sources */,
-				09EF87982A2500C300EC9D7A /* Color+Extension.swift in Sources */,
-				094A43732A2901DE00E566F8 /* ChartsGridCell.swift in Sources */,
-				09FF44A02A2522F4002CBA8C /* LoginInfoView.swift in Sources */,
-				09EF877B2A24DB3F00EC9D7A /* LoginView.swift in Sources */,
-				0909CC932A320D1D0005A4AB /* ChartsInfoCell.swift in Sources */,
-				09F879B52A28DAFA00E7545F /* Double+Extension.swift in Sources */,
-				097A80542A332B0A00B5CF3A /* NewsApiService.swift in Sources */,
-				09F879B32A28BF7200E7545F /* ChartsModel.swift in Sources */,
-				097A80502A332AF400B5CF3A /* NewsViewModel.swift in Sources */,
+				09ADAA082B02959200107F74 /* ContentView.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,
-				093932502A25F7C300F813A2 /* PoolModel.swift in Sources */,
-				0939324E2A25F7BA00F813A2 /* PoolViewModel.swift in Sources */,
-				097E57CB2A31D956009F4CB4 /* ChartsMiningService.swift in Sources */,
-				093932532A26619B00F813A2 /* ChartsView.swift in Sources */,
-				097E57CD2A31DEFA009F4CB4 /* Date+Extension.swift in Sources */,
-				09AAE0302A3489540026535A /* NotificationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MineCharts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MineCharts/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 2B85PH5M9P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -462,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MineCharts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MineCharts/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 2B85PH5M9P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
