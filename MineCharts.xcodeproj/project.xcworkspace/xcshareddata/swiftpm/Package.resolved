@@ -8,6 +8,15 @@
         "revision" : "c75584ac759cbb16b204d0a7de3ebf53ea6b304d",
         "version" : "7.9.0"
       }
+    },
+    {
+      "identity" : "safesfsymbols",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparrowcode/SafeSFSymbols",
+      "state" : {
+        "revision" : "cbd98dea56850f958146c84179d78aa8a097ec6d",
+        "version" : "2.0.0"
+      }
     }
   ],
   "version" : 2

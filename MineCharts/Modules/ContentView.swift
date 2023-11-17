@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomeView()
+        NavigationStack {
+            HomeView()
+                .navigationTitle("Miner")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
