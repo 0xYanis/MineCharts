@@ -14,7 +14,10 @@ struct HomeView: View {
     private var viewModel = HomeViewModel()
     
     private var gridItems: [GridItem] {
-        Array(repeating: GridItem(.flexible()), count: 2)
+        Array(
+            repeating: GridItem(.flexible()),
+            count: 2
+        )
     }
     
     var body: some View {
@@ -24,18 +27,8 @@ struct HomeView: View {
             LazyVGrid(
                 columns: gridItems,
                 alignment: .center) {
-                    Text("Монета")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.gradient.opacity(0.15))
-                        .cornerRadius(10)
-                    Text("Ферма")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 100)
-                        .background(Color.gray.gradient.opacity(0.15))
-                        .cornerRadius(10)
+                    CoinItem()
+                    FermItem()
                 }
                 .padding(.horizontal)
             Text("График")
