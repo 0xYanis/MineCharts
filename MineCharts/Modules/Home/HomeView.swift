@@ -13,10 +13,31 @@ struct HomeView: View {
     @StateObject
     private var viewModel = HomeViewModel()
     
+    private var gridItems: [GridItem] {
+        Array(repeating: GridItem(.flexible()), count: 2)
+    }
+    
     var body: some View {
         ScrollView {
             RecommendView()
                 .padding([.top, .horizontal])
+            LazyVGrid(
+                columns: gridItems,
+                alignment: .center) {
+                    Text("Монета")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.gradient.opacity(0.15))
+                        .cornerRadius(10)
+                    Text("Ферма")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.gray.gradient.opacity(0.15))
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
             Text("График")
                 .padding()
                 .frame(maxWidth: .infinity)
