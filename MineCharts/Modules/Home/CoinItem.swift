@@ -15,7 +15,7 @@ struct CoinItem: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .frame(height: 100)
-                .background(Color.gray.gradient.opacity(0.15))
+                .lightBackground(.gray)
                 .cornerRadius(10)
         }
     }

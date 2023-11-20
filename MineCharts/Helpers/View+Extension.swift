@@ -18,3 +18,9 @@ extension View {
         modifier(TapPressGestureModifier(state: state))
     }
 }
+
+extension View {
+    func lightBackground(_ color: Color) -> some View {
+        modifier(LightBackgroundModifier(color: color))
+    }
+}

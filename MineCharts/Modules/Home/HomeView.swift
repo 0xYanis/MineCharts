@@ -35,7 +35,7 @@ struct HomeView: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .frame(height: 200)
-                .background(Color.gray.gradient.opacity(0.15))
+                .lightBackground(.gray)
                 .cornerRadius(10)
                 .padding(.horizontal)
             Spacer()
