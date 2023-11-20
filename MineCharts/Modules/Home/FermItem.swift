@@ -18,12 +18,13 @@ struct FermItem: View {
                 .lightBackground(.gray)
                 .cornerRadius(10)
         }
+        .scaleByTap()
     }
     
 }
 
 struct FermItem_Previews: PreviewProvider {
     static var previews: some View {
-        FermItem()
+        ContentView()
     }
 }

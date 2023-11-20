@@ -14,8 +14,8 @@ extension View {
 }
 
 extension View {
-    func tapAndPressGesture(_ state: Binding<Bool>) -> some View {
-        modifier(TapPressGestureModifier(state: state))
+    func scaleByTap() -> some View {
+        modifier(ScaleByTapGestureModifier())
     }
 }
 

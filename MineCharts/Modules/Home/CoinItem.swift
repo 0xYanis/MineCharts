@@ -18,11 +18,12 @@ struct CoinItem: View {
                 .lightBackground(.gray)
                 .cornerRadius(10)
         }
+        .scaleByTap()
     }
 }
 
 struct CoinItem_Previews: PreviewProvider {
     static var previews: some View {
-        CoinItem()
+        ContentView()
     }
 }

@@ -9,9 +9,6 @@ import SwiftUI
 
 struct RecommendView: View {
     
-    @State
-    private var isHighlighted = false
-    
     @EnvironmentObject
     private var viewModel: HomeViewModel
     
@@ -41,8 +38,7 @@ struct RecommendView: View {
         .lightBackground(.gray)
         .frame(maxWidth: .infinity)
         .cornerRadius(10)
-        .scaleEffect(isHighlighted ? 0.95 : 1.0)
-        .tapAndPressGesture($isHighlighted)
+        .scaleByTap()
     }
     
     @ViewBuilder

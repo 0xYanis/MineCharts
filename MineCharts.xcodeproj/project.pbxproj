@@ -20,7 +20,7 @@
 		09EF87662A24D6D000EC9D7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */; };
 		09F732C22B041500004FA502 /* SafeSFSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 09F732C12B041500004FA502 /* SafeSFSymbols */; };
 		09FD22882B07C16800DFACA6 /* PillTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD22872B07C16800DFACA6 /* PillTextModifier.swift */; };
-		09FD228A2B07C1E800DFACA6 /* TapPressGestureModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD22892B07C1E800DFACA6 /* TapPressGestureModifier.swift */; };
+		09FD228A2B07C1E800DFACA6 /* ScaleByTapGestureModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD22892B07C1E800DFACA6 /* ScaleByTapGestureModifier.swift */; };
 		09FD228D2B07C21400DFACA6 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD228C2B07C21400DFACA6 /* View+Extension.swift */; };
 		09FD228F2B07C24000DFACA6 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD228E2B07C24000DFACA6 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		09EF87622A24D6D000EC9D7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09EF87652A24D6D000EC9D7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09FD22872B07C16800DFACA6 /* PillTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTextModifier.swift; sourceTree = "<group>"; };
-		09FD22892B07C1E800DFACA6 /* TapPressGestureModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPressGestureModifier.swift; sourceTree = "<group>"; };
+		09FD22892B07C1E800DFACA6 /* ScaleByTapGestureModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleByTapGestureModifier.swift; sourceTree = "<group>"; };
 		09FD228C2B07C21400DFACA6 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		09FD228E2B07C24000DFACA6 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				09FD22872B07C16800DFACA6 /* PillTextModifier.swift */,
-				09FD22892B07C1E800DFACA6 /* TapPressGestureModifier.swift */,
+				09FD22892B07C1E800DFACA6 /* ScaleByTapGestureModifier.swift */,
 				09CFA82E2B0BF6FB00E904A0 /* LightBackgroundModifier.swift */,
 			);
 			path = Modifiers;
@@ -227,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FD228A2B07C1E800DFACA6 /* TapPressGestureModifier.swift in Sources */,
+				09FD228A2B07C1E800DFACA6 /* ScaleByTapGestureModifier.swift in Sources */,
 				09CFA82F2B0BF6FB00E904A0 /* LightBackgroundModifier.swift in Sources */,
 				09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */,
 				09ADAA082B02959200107F74 /* ContentView.swift in Sources */,
