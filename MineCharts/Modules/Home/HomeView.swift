@@ -31,13 +31,7 @@ struct HomeView: View {
                     FermItem()
                 }
                 .padding(.horizontal)
-            Text("График")
-                .padding()
-                .frame(maxWidth: .infinity)
-                .frame(height: 200)
-                .lightBackground(.gray)
-                .cornerRadius(10)
-                .padding(.horizontal)
+            HomeChart()
             Spacer()
         }
         .environmentObject(viewModel)
