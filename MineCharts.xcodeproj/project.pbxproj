@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */; };
 		092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B62072B0E94A4001451C2 /* HomeChart.swift */; };
 		096178252A7D1815002CA8A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 096178242A7D1815002CA8A6 /* Kingfisher */; };
 		09ADAA082B02959200107F74 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA072B02959200107F74 /* StartView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		092B62072B0E94A4001451C2 /* HomeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChart.swift; sourceTree = "<group>"; };
 		09ADAA072B02959200107F74 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		09ADAA0B2B0296D300107F74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				09FD228B2B07C20200DFACA6 /* Helpers */,
 				09FD22862B07C13900DFACA6 /* Modifiers */,
 				09ADAA092B0295B700107F74 /* Resources */,
+				0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */,
 			);
 			path = MineCharts;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */,
 				09ADAA082B02959200107F74 /* StartView.swift in Sources */,
 				092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */,
+				0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */,
 				09FD22882B07C16800DFACA6 /* PillTextModifier.swift in Sources */,
 				09CFA82D2B0BF40C00E904A0 /* FermItem.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,

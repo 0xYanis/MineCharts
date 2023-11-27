@@ -43,9 +43,3 @@ struct HomeChart: View {
     }
     
 }
-
-struct HomeChart_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

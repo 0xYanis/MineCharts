@@ -21,9 +21,3 @@ struct CoinItem: View {
         .scaleByTap()
     }
 }
-
-struct CoinItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

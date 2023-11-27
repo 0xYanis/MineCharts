@@ -22,9 +22,3 @@ struct FermItem: View {
     }
     
 }
-
-struct FermItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
