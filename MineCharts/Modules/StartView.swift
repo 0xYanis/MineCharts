@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct StartView: View {
+    
     var body: some View {
         NavigationStack {
             HomeView()

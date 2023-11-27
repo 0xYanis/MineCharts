@@ -9,4 +9,6 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
     
+    func fetch() {}
+    
 }
