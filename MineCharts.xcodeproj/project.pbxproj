@@ -64,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09089A082B14DD3600029A82 /* WalletAddress */ = {
+			isa = PBXGroup;
+			children = (
+				0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */,
+				09089A042B14DC4100029A82 /* SecureAddressFacade.swift */,
+				09089A062B14DCD000029A82 /* DataError.swift */,
+			);
+			path = WalletAddress;
+			sourceTree = "<group>";
+		};
 		0921E4D72B14CEB700EBEA44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +137,7 @@
 				09FD228B2B07C20200DFACA6 /* Helpers */,
 				09FD22862B07C13900DFACA6 /* Modifiers */,
 				09ADAA092B0295B700107F74 /* Resources */,
-				0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */,
-				09089A042B14DC4100029A82 /* SecureAddressFacade.swift */,
-				09089A062B14DCD000029A82 /* DataError.swift */,
+				09089A082B14DD3600029A82 /* WalletAddress */,
 			);
 			path = MineCharts;
 			sourceTree = "<group>";
