@@ -28,9 +28,11 @@ struct RecommendView: View {
                     }
                 }
                 .font(.title3)
-                .padding(10)
+                .padding([.horizontal], 10)
+                .padding([.vertical], 5)
+                
                 Divider()
-                    .padding(.leading, 10)
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(viewModel.recommendCoins, id: \.id) { coin in
@@ -41,8 +43,9 @@ struct RecommendView: View {
                                 }
                         }
                     }
+                    .padding(.horizontal, 10)
                 }
-                .padding([.leading, .bottom], 10)
+                .padding(.bottom, 10)
             }
         }
         .lightBackground(.gray)
@@ -56,5 +59,11 @@ struct RecommendView: View {
 private extension RecommendView {
     var title: String {
         "Рекомендация:"
+    }
+}
+
+struct RecommendView_Previews: PreviewProvider {
+    static var previews: some View {
+        StartView()
     }
 }
