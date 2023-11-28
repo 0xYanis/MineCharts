@@ -44,7 +44,7 @@ struct RecommendView: View {
 
 private extension RecommendView {
     var title: String {
-        "Рекомендация:"
+        "Рекомендация"
     }
 }
 

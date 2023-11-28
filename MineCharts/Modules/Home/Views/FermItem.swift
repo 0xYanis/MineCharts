@@ -10,15 +10,25 @@ import SwiftUI
 struct FermItem: View {
     
     var body: some View {
-        VStack {
-            Text("Ферма")
-                .padding()
-                .frame(maxWidth: .infinity)
-                .frame(height: 100)
-                .lightBackground(.gray)
-                .cornerRadius(10)
+        CardItem {
+            Text(title)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.title3)
+        } middle: {
+            HStack(alignment: .center) {
+                ProgressView()
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
+//            Text("Информация")
+//                .foregroundColor(.gray)
+//                .font(.caption2)
+                .frame(height: 60)
         }
-        .scaleByTap()
     }
-    
+}
+
+private extension FermItem {
+    var title: String {
+        "Ферма"
+    }
 }

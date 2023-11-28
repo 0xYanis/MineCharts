@@ -32,6 +32,7 @@ struct HomeView: View {
                 }
                 .padding(.horizontal)
             HomeChart()
+                .padding(.horizontal)
             Spacer()
         }
         .environmentObject(viewModel)

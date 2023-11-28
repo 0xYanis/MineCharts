@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  StartView.swift
 //  MineCharts
 //
 //  Created by Yanis on 13.11.2023.

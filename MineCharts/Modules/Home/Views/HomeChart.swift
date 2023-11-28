@@ -25,21 +25,29 @@ struct HomeChart: View {
     ]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Chart(data, id: \.category) { item in
-                BarMark(
-                    x: .value("Category", item.category),
-                    y: .value("Value", item.value)
-                )
+        
+        CardItem {
+            Text(title)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.title3)
+        } middle: {
+            VStack(alignment: .leading) {
+                Chart(data, id: \.category) { item in
+                    BarMark(
+                        x: .value("Category", item.category),
+                        y: .value("Value", item.value)
+                    )
+                }
+                .padding(10)
             }
-            .padding(10)
+            .frame(height: 200)
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 200)
-        .lightBackground(.gray)
-        .cornerRadius(10)
-        .padding(.horizontal)
-        .scaleByTap()
     }
     
+}
+
+private extension HomeChart {
+    var title: String {
+        "Курс"
+    }
 }
