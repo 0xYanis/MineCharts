@@ -11,9 +11,7 @@ struct CoinItem: View {
     
     var body: some View {
         CardItem {
-            Text(title)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .font(.title3)
+            HeaderText(title)
         } middle: {
             HStack(alignment: .center) {
                 ProgressView()

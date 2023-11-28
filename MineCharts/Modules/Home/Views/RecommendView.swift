@@ -14,9 +14,7 @@ struct RecommendView: View {
     
     var body: some View {
         CardItem {
-            Text(title)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .font(.title3)
+            HeaderText(title)
             Button {
                 
             } label: {

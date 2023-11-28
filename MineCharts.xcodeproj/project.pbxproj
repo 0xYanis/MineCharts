@@ -17,6 +17,7 @@
 		09ADAA0E2B0296DC00107F74 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */; };
 		09CF1F282B1674560077C328 /* RecommendCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF1F272B1674560077C328 /* RecommendCoin.swift */; };
 		09CF1F2B2B167D4E0077C328 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF1F2A2B167D4E0077C328 /* CardItem.swift */; };
+		09CF1F2D2B1681530077C328 /* HeaderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF1F2C2B1681530077C328 /* HeaderText.swift */; };
 		09CFA82B2B0BF35E00E904A0 /* CoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA82A2B0BF35E00E904A0 /* CoinItem.swift */; };
 		09CFA82D2B0BF40C00E904A0 /* FermItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA82C2B0BF40C00E904A0 /* FermItem.swift */; };
 		09CFA82F2B0BF6FB00E904A0 /* LightBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA82E2B0BF6FB00E904A0 /* LightBackgroundModifier.swift */; };
@@ -41,6 +42,7 @@
 		09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		09CF1F272B1674560077C328 /* RecommendCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCoin.swift; sourceTree = "<group>"; };
 		09CF1F2A2B167D4E0077C328 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		09CF1F2C2B1681530077C328 /* HeaderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderText.swift; sourceTree = "<group>"; };
 		09CFA82A2B0BF35E00E904A0 /* CoinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItem.swift; sourceTree = "<group>"; };
 		09CFA82C2B0BF40C00E904A0 /* FermItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FermItem.swift; sourceTree = "<group>"; };
 		09CFA82E2B0BF6FB00E904A0 /* LightBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBackgroundModifier.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				09CF1F2A2B167D4E0077C328 /* CardItem.swift */,
+				09CF1F2C2B1681530077C328 /* HeaderText.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				09CFA82B2B0BF35E00E904A0 /* CoinItem.swift in Sources */,
 				09FD228D2B07C21400DFACA6 /* View+Extension.swift in Sources */,
 				09CF1F2B2B167D4E0077C328 /* CardItem.swift in Sources */,
+				09CF1F2D2B1681530077C328 /* HeaderText.swift in Sources */,
 				09ADAA0E2B0296DC00107F74 /* HomeViewModel.swift in Sources */,
 				09089A072B14DCD000029A82 /* DataError.swift in Sources */,
 				09FD228F2B07C24000DFACA6 /* Color+Extension.swift in Sources */,
