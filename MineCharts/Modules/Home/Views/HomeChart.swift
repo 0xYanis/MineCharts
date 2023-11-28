@@ -25,10 +25,9 @@ struct HomeChart: View {
     ]
     
     var body: some View {
-        
-        CardItem {
+        CardItem(header: {
             HeaderText(title)
-        } middle: {
+        }, middle: {
             VStack(alignment: .leading) {
                 Chart(data, id: \.category) { item in
                     BarMark(
@@ -39,7 +38,8 @@ struct HomeChart: View {
                 .padding(10)
             }
             .frame(height: 200)
-        }
+            
+        }, isDivided: false)
     }
     
 }
