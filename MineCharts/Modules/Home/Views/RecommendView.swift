@@ -13,45 +13,31 @@ struct RecommendView: View {
     private var viewModel: HomeViewModel
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Text(title)
-                        .frame(
-                            maxWidth: .infinity,
-                            alignment: .leading
-                        )
-                    Button {
-                        
-                    } label: {
-                        Image(.info.circle).foregroundColor(.blue)
-                    }
-                }
+        CardItem {
+            Text(title)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title3)
-                .padding([.horizontal], 10)
-                .padding([.vertical], 5)
+            Button {
                 
-                Divider()
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(viewModel.recommendCoins, id: \.id) { coin in
-                            Text(coin.text)
-                                .pilledText(coin.color)
-                                .onTapGesture {
-                                    
-                                }
-                        }
+            } label: {
+                Image(.info.circle)
+                    .foregroundColor(.blue)
+                    .font(.title3)
+            }
+        } middle: {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(viewModel.recommendCoins, id: \.id) { coin in
+                        Text(coin.text)
+                            .pilledText(coin.color)
+                            .onTapGesture {
+                                
+                            }
                     }
-                    .padding(.horizontal, 10)
                 }
-                .padding(.bottom, 10)
+                .padding(.horizontal, 10)
             }
         }
-        .lightBackground(.gray)
-        .frame(maxWidth: .infinity)
-        .cornerRadius(10)
-        .scaleByTap()
     }
     
 }
