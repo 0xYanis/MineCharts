@@ -16,7 +16,7 @@ struct RecommendView: View {
         HStack {
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
-                    Text("Рекомендация:")
+                    Text(title)
                         .frame(
                             maxWidth: .infinity,
                             alignment: .leading
@@ -33,9 +33,9 @@ struct RecommendView: View {
                     .padding(.leading, 10)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(0..<4) { id in
-                            Text("Novacoin")
-                                .pilledText()
+                        ForEach(viewModel.recommendCoins, id: \.id) { coin in
+                            Text(coin.text)
+                                .pilledText(coin.color)
                                 .onTapGesture {
                                     
                                 }
@@ -51,4 +51,10 @@ struct RecommendView: View {
         .scaleByTap()
     }
     
+}
+
+private extension RecommendView {
+    var title: String {
+        "Рекомендация:"
+    }
 }

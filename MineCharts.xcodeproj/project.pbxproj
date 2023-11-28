@@ -15,6 +15,7 @@
 		09ADAA082B02959200107F74 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA072B02959200107F74 /* StartView.swift */; };
 		09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0B2B0296D300107F74 /* HomeView.swift */; };
 		09ADAA0E2B0296DC00107F74 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */; };
+		09CF1F282B1674560077C328 /* RecommendCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF1F272B1674560077C328 /* RecommendCoin.swift */; };
 		09CFA82B2B0BF35E00E904A0 /* CoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA82A2B0BF35E00E904A0 /* CoinItem.swift */; };
 		09CFA82D2B0BF40C00E904A0 /* FermItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA82C2B0BF40C00E904A0 /* FermItem.swift */; };
 		09CFA82F2B0BF6FB00E904A0 /* LightBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA82E2B0BF6FB00E904A0 /* LightBackgroundModifier.swift */; };
@@ -37,6 +38,7 @@
 		09ADAA072B02959200107F74 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		09ADAA0B2B0296D300107F74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		09CF1F272B1674560077C328 /* RecommendCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCoin.swift; sourceTree = "<group>"; };
 		09CFA82A2B0BF35E00E904A0 /* CoinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItem.swift; sourceTree = "<group>"; };
 		09CFA82C2B0BF40C00E904A0 /* FermItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FermItem.swift; sourceTree = "<group>"; };
 		09CFA82E2B0BF6FB00E904A0 /* LightBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightBackgroundModifier.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				09CFA82C2B0BF40C00E904A0 /* FermItem.swift */,
 				09CFA8302B0BF72D00E904A0 /* RecommendView.swift */,
 				092B62072B0E94A4001451C2 /* HomeChart.swift */,
+				09CF1F272B1674560077C328 /* RecommendCoin.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */,
 				09FD22882B07C16800DFACA6 /* PillTextModifier.swift in Sources */,
 				09CFA82D2B0BF40C00E904A0 /* FermItem.swift in Sources */,
+				09CF1F282B1674560077C328 /* RecommendCoin.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,
 				09CFA8312B0BF72D00E904A0 /* RecommendView.swift in Sources */,
 				09CFA82B2B0BF35E00E904A0 /* CoinItem.swift in Sources */,

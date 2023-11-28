@@ -9,6 +9,9 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
     
+    @Published
+    var recommendCoins: [RecommendCoin] = RecommendCoin.mockCoins
+    
     func fetch() {}
     
 }
