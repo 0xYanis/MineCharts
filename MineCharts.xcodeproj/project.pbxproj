@@ -10,6 +10,7 @@
 		09089A052B14DC4100029A82 /* SecureAddressFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09089A042B14DC4100029A82 /* SecureAddressFacade.swift */; };
 		09089A072B14DCD000029A82 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09089A062B14DCD000029A82 /* DataError.swift */; };
 		0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */; };
+		092200A72B175C440039F7A4 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092200A62B175C440039F7A4 /* Collection+Extension.swift */; };
 		092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B62072B0E94A4001451C2 /* HomeChart.swift */; };
 		096178252A7D1815002CA8A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 096178242A7D1815002CA8A6 /* Kingfisher */; };
 		09ADAA082B02959200107F74 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA072B02959200107F74 /* StartView.swift */; };
@@ -36,6 +37,7 @@
 		09089A042B14DC4100029A82 /* SecureAddressFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAddressFacade.swift; sourceTree = "<group>"; };
 		09089A062B14DCD000029A82 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		092200A62B175C440039F7A4 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		092B62072B0E94A4001451C2 /* HomeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChart.swift; sourceTree = "<group>"; };
 		09ADAA072B02959200107F74 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		09ADAA0B2B0296D300107F74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				09CF1F292B167D3D0077C328 /* UI */,
 				09FD228C2B07C21400DFACA6 /* View+Extension.swift */,
 				09FD228E2B07C24000DFACA6 /* Color+Extension.swift */,
+				092200A62B175C440039F7A4 /* Collection+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */,
 				09FD22882B07C16800DFACA6 /* PillTextModifier.swift in Sources */,
 				09CFA82D2B0BF40C00E904A0 /* FermItem.swift in Sources */,
+				092200A72B175C440039F7A4 /* Collection+Extension.swift in Sources */,
 				09CF1F282B1674560077C328 /* RecommendCoin.swift in Sources */,
 				09EF875F2A24D6CC00EC9D7A /* MineChartsApp.swift in Sources */,
 				09CFA8312B0BF72D00E904A0 /* RecommendView.swift in Sources */,
