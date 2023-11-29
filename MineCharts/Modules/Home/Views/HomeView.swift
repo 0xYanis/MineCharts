@@ -36,6 +36,8 @@ struct HomeView: View {
             Spacer()
         }
         .environmentObject(viewModel)
+        .navigationTitle("Miner")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

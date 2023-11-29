@@ -17,10 +17,7 @@ struct CoinItem: View {
                 ProgressView()
             }
             .frame(maxWidth: .infinity, alignment: .center)
-//            Text("Информация")
-//                .foregroundColor(.gray)
-//                .font(.caption2)
-                .frame(height: 60)
+            .frame(height: 60)
         }
     }
 }

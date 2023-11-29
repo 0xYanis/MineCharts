@@ -12,8 +12,6 @@ struct StartView: View {
     var body: some View {
         NavigationStack {
             HomeView()
-                .navigationTitle("Miner")
-                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

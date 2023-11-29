@@ -9,18 +9,18 @@ import SwiftUI
 
 public struct CardItem<Header: View, Middle: View>: View {
     
+    private var isDivided: Bool
     private var header: () -> Header
     private var middle: () -> Middle
-    private var isDivided: Bool
     
     init(
+        isDivided: Bool = true,
         @ViewBuilder header: @escaping () -> Header,
-        @ViewBuilder middle: @escaping () -> Middle,
-        isDivided: Bool = true
+        @ViewBuilder middle: @escaping () -> Middle
     ) {
+        self.isDivided = isDivided
         self.header = header
         self.middle = middle
-        self.isDivided = isDivided
     }
     
     public var body: some View {

@@ -15,9 +15,7 @@ struct RecommendView: View {
     var body: some View {
         CardItem {
             HeaderText(title)
-            Button {
-                
-            } label: {
+            Button(action: viewModel.recommendInfoTapped) {
                 Image(.info.circle)
                     .foregroundColor(.blue)
                     .font(.title3)
@@ -26,16 +24,20 @@ struct RecommendView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(viewModel.recommendCoins, id: \.id) { coin in
-                        Text(coin.text)
-                            .pilledText(coin.color)
-                            .onTapGesture {
-                                
-                            }
+                        filledCoin(coin)
                     }
                 }
                 .padding(.horizontal, 10)
             }
         }
+    }
+    
+    private func filledCoin(_ coin: RecommendCoin) -> some View {
+        Text(coin.text)
+            .pilledText(coin.color)
+            .onTapGesture {
+                viewModel.recommendCoinTapped(coin.id)
+            }
     }
     
 }
