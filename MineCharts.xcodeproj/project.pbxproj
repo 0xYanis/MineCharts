@@ -13,6 +13,7 @@
 		092200A72B175C440039F7A4 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092200A62B175C440039F7A4 /* Collection+Extension.swift */; };
 		092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B62072B0E94A4001451C2 /* HomeChart.swift */; };
 		096178252A7D1815002CA8A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 096178242A7D1815002CA8A6 /* Kingfisher */; };
+		098C3DA22B194F9E004CB16C /* ShimmerEffectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C3DA12B194F9E004CB16C /* ShimmerEffectBox.swift */; };
 		09ADAA082B02959200107F74 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA072B02959200107F74 /* StartView.swift */; };
 		09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0B2B0296D300107F74 /* HomeView.swift */; };
 		09ADAA0E2B0296DC00107F74 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */; };
@@ -39,6 +40,7 @@
 		0921E4D92B14D16A00EBEA44 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		092200A62B175C440039F7A4 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		092B62072B0E94A4001451C2 /* HomeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChart.swift; sourceTree = "<group>"; };
+		098C3DA12B194F9E004CB16C /* ShimmerEffectBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectBox.swift; sourceTree = "<group>"; };
 		09ADAA072B02959200107F74 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		09ADAA0B2B0296D300107F74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				09CF1F2A2B167D4E0077C328 /* CardItem.swift */,
 				09CF1F2C2B1681530077C328 /* HeaderText.swift */,
+				098C3DA12B194F9E004CB16C /* ShimmerEffectBox.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				09CFA82F2B0BF6FB00E904A0 /* LightBackgroundModifier.swift in Sources */,
 				09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */,
 				09ADAA082B02959200107F74 /* StartView.swift in Sources */,
+				098C3DA22B194F9E004CB16C /* ShimmerEffectBox.swift in Sources */,
 				092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */,
 				0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */,
 				09FD22882B07C16800DFACA6 /* PillTextModifier.swift in Sources */,
