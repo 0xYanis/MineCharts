@@ -97,6 +97,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		093FCA5F2B23AF30000E8231 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		09ADAA062B02953B00107F74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +126,8 @@
 		09ADAA0A2B0296C700107F74 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				093FCA5F2B23AF30000E8231 /* ViewModels */,
 				0921E4D72B14CEB700EBEA44 /* Views */,
-				09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
