@@ -10,7 +10,7 @@ import SwiftUI
 struct CoinItem: View {
     
     var body: some View {
-        CardItem {
+        CardItem(isDivided: false) {
             HeaderText(title)
         } middle: {
             HStack(alignment: .center) {

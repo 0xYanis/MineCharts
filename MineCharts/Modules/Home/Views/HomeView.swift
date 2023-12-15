@@ -13,13 +13,6 @@ struct HomeView: View {
     @StateObject
     private var viewModel = HomeViewModel()
     
-    private var gridItems: [GridItem] {
-        Array(
-            repeating: GridItem(.flexible()),
-            count: 2
-        )
-    }
-    
     var body: some View {
         ScrollView {
             RecommendView()
@@ -41,3 +34,23 @@ struct HomeView: View {
     }
 }
 
+// MARK: - Private methods & computed properties
+
+private extension HomeView {
+    
+    var gridItems: [GridItem] {
+        Array(
+            repeating: GridItem(.flexible()),
+            count: 2
+        )
+    }
+    
+}
+
+#if DEBUG
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        StartView()
+    }
+}
+#endif

@@ -48,8 +48,10 @@ private extension RecommendView {
     }
 }
 
+#if DEBUG
 struct RecommendView_Previews: PreviewProvider {
     static var previews: some View {
         StartView()
     }
 }
+#endif

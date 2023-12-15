@@ -46,8 +46,10 @@ struct ShimmerEffectBox: View {
     
 }
 
+#if DEBUG
 struct ShimmerEffectBox_Previews: PreviewProvider {
     static var previews: some View {
         ShimmerEffectBox()
     }
 }
+#endif

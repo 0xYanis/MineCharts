@@ -19,5 +19,6 @@ struct HeaderText: View {
         Text(text)
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.title3)
+            .foregroundColor(.secondary)
     }
 }
