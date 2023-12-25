@@ -17,6 +17,7 @@ struct HomeView: View {
         ScrollView {
             RecommendView()
                 .padding([.top, .horizontal])
+            
             LazyVGrid(
                 columns: gridItems,
                 alignment: .center) {
@@ -24,8 +25,10 @@ struct HomeView: View {
                     FermItem()
                 }
                 .padding(.horizontal)
+            
             HomeChart()
                 .padding(.horizontal)
+            
             Spacer()
         }
         .environmentObject(viewModel)

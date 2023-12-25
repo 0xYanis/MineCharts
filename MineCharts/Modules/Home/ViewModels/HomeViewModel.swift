@@ -13,9 +13,4 @@ final class HomeViewModel: ObservableObject {
     var recommendCoins: [RecommendCoin] = RecommendCoin.mockCoins
     
     func fetch() {}
-    
-    func recommendInfoTapped() {}
-    
-    func recommendCoinTapped(_ coinId: String) {}
-    
 }

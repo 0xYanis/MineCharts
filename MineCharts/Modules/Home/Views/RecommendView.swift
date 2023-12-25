@@ -15,7 +15,8 @@ struct RecommendView: View {
     var body: some View {
         CardItem {
             HeaderText(title)
-            Button(action: viewModel.recommendInfoTapped) {
+            
+            Button(action: {}) {
                 Image(.info.circle)
                     .foregroundColor(.blue)
                     .font(.title3)
@@ -36,7 +37,7 @@ struct RecommendView: View {
         Text(coin.text)
             .pilledText(coin.color)
             .onTapGesture {
-                viewModel.recommendCoinTapped(coin.id)
+                
             }
     }
     
