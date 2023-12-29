@@ -7,17 +7,29 @@
 
 import Foundation
 
-enum Page: Hashable {
+enum Page: String, Identifiable {
     case home
     case coin
     case payouts
+    
+    var id: String {
+        self.rawValue
+    }
 }
 
-enum Sheet: Hashable {
+enum Sheet: String, Identifiable {
     case info
     case onboarding
+    
+    var id: String {
+        self.rawValue
+    }
 }
 
-enum FullScreenCover: Hashable {
+enum FullScreenCover: String, Identifiable {
     case auth
+    
+    var id: String {
+        self.rawValue
+    }
 }
