@@ -14,6 +14,8 @@
 		092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B62072B0E94A4001451C2 /* HomeChart.swift */; };
 		096178252A7D1815002CA8A6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 096178242A7D1815002CA8A6 /* Kingfisher */; };
 		098C3DA22B194F9E004CB16C /* ShimmerEffectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C3DA12B194F9E004CB16C /* ShimmerEffectBox.swift */; };
+		099E09C52B3F23B100D68840 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E09C42B3F23B100D68840 /* Coordinator.swift */; };
+		099E09C72B3F26C600D68840 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E09C62B3F26C600D68840 /* Page.swift */; };
 		09ADAA082B02959200107F74 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA072B02959200107F74 /* StartView.swift */; };
 		09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0B2B0296D300107F74 /* HomeView.swift */; };
 		09ADAA0E2B0296DC00107F74 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */; };
@@ -41,6 +43,8 @@
 		092200A62B175C440039F7A4 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		092B62072B0E94A4001451C2 /* HomeChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChart.swift; sourceTree = "<group>"; };
 		098C3DA12B194F9E004CB16C /* ShimmerEffectBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectBox.swift; sourceTree = "<group>"; };
+		099E09C42B3F23B100D68840 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		099E09C62B3F26C600D68840 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		09ADAA072B02959200107F74 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		09ADAA0B2B0296D300107F74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		09ADAA0D2B0296DC00107F74 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -105,10 +109,20 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		09ADAA062B02953B00107F74 /* Modules */ = {
+		099E09C32B3F239400D68840 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				09ADAA072B02959200107F74 /* StartView.swift */,
+				099E09C42B3F23B100D68840 /* Coordinator.swift */,
+				099E09C62B3F26C600D68840 /* Page.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		09ADAA062B02953B00107F74 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				099E09C32B3F239400D68840 /* Coordinator */,
 				09ADAA0A2B0296C700107F74 /* Home */,
 			);
 			path = Modules;
@@ -292,6 +306,7 @@
 				09ADAA0C2B0296D300107F74 /* HomeView.swift in Sources */,
 				09ADAA082B02959200107F74 /* StartView.swift in Sources */,
 				098C3DA22B194F9E004CB16C /* ShimmerEffectBox.swift in Sources */,
+				099E09C52B3F23B100D68840 /* Coordinator.swift in Sources */,
 				092B62082B0E94A4001451C2 /* HomeChart.swift in Sources */,
 				0921E4DA2B14D16A00EBEA44 /* KeyChainManager.swift in Sources */,
 				09FD22882B07C16800DFACA6 /* PillTextModifier.swift in Sources */,
@@ -304,6 +319,7 @@
 				09FD228D2B07C21400DFACA6 /* View+Extension.swift in Sources */,
 				09CF1F2B2B167D4E0077C328 /* CardItem.swift in Sources */,
 				09CF1F2D2B1681530077C328 /* HeaderText.swift in Sources */,
+				099E09C72B3F26C600D68840 /* Page.swift in Sources */,
 				09ADAA0E2B0296DC00107F74 /* HomeViewModel.swift in Sources */,
 				09089A072B14DCD000029A82 /* DataError.swift in Sources */,
 				09FD228F2B07C24000DFACA6 /* Color+Extension.swift in Sources */,
